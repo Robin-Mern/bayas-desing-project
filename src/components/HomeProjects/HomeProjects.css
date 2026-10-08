@@ -1,0 +1,320 @@
+
+
+.homeProjectsSection {
+  position: relative;
+  width: 100%;
+  background-color: #0b0f19;
+  color: #ffffff;
+  padding: 0px 0 0px;
+  /* CRITICAL: No overflow:hidden here, otherwise position:sticky will not work */
+}
+
+/* Stacking Cards Container */
+.cardsStackWrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Individual Sticky Card */
+.stackCardItem {
+  position: sticky;
+  width: 100%;
+  height: 80vh;
+  min-height: 680px;
+  max-height: 740px;
+  margin-bottom: 26vh;
+  border-radius: 0px;
+  overflow: hidden;
+  background-color: #121826;
+  /* border: 1px solid rgba(255, 255, 255, 0.16); */
+  /* box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.5), 
+              0 25px 60px rgba(0, 0, 0, 0.8); */
+  display: block;
+  text-decoration: none;
+  transition: box-shadow 0.3s ease;
+  will-change: transform;
+   cursor: default;
+}
+
+.stackCardItem:last-child {
+  margin-bottom: 0;
+}
+
+
+
+/* Background Image Layer */
+.stackCardImageWrapper {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.stackCardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.stackCardItem:hover .stackCardImage {
+  transform: scale(1.03);
+}
+
+/* Dark Gradient Vignette for Text Contrast */
+.stackCardOverlay {
+  position: absolute;
+  inset: 0;
+background: linear-gradient(#141b3473 2%, #141b3414 42% 45%, #141b34c2 62%, #141b34f0 78%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* ===================================================
+   Top Section Header INSIDE Card 1 (As seen in Figma)
+   =================================================== */
+
+.cardTopHeader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 90px 48px 40px;
+  z-index: 5;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  z-index: 9;
+  max-width: 1240px;
+    margin-inline: auto;
+    width: 98%;
+}
+
+.cardTopHeaderLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+/* White "Works" Capsule Pill Badge */
+.worksPillBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #ffffff;
+  color: #12192c;
+    border: 1px solid #fff;
+  border-radius: 30px;
+  font-size: 15px;
+  padding: 8px 16px;
+  line-height: 1.2;
+  font-weight: 600;
+  letter-spacing: -.54px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.worksBadgeDot {
+  width: 7px;
+  height: 7px;
+  background-color: #12192c;
+  border-radius: 50%;
+  display: inline-block;
+  display: none;
+}
+
+/* Big "Our Projects" Title */
+.cardMainHeading {
+  font-size:48px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.15;
+  letter-spacing: -0.5px;
+  text-shadow: 0 4px 18px rgba(0, 0, 0, 0.6);
+}
+
+/* White "View All Projects ->" Button */
+.viewAllProjectsBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #ffffff;
+  color: #12192c;
+  padding: 10px 24px;
+  border-radius: 50px;
+font-size: 16px;
+    font-weight: 700;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.viewAllProjectsBtn:hover {
+  background-color:#3C2417;
+  color: #fff;
+  transform: translateY(-2px);
+  /* box-shadow: 0 8px 22px #3C2417; */
+}
+
+.viewAllProjectsBtn .btnArrow {
+  font-size: 1.1rem;
+  transition: transform 0.2s ease;
+  display: inline-block;
+  line-height: 1;
+}
+
+.viewAllProjectsBtn:hover .btnArrow {
+  transform: translateX(4px);
+}
+
+/* ===================================================
+   Bottom Card Content Details (Metadata & Client Name)
+   =================================================== */
+
+.cardBottomContent {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+padding: 44px 48px 140px;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  max-width: 1240px;
+    margin-inline: auto;
+     width: 98%;
+}
+
+/* "Residential" Category Tag */
+.categoryTag {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 30px;
+  background-color: rgba(255, 255, 255, 0.14);
+  /* backdrop-filter: blur(8px); */
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  font-size:15px;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: -0.54px;
+  line-height: 1.2;
+  /* text-transform: capitalize; */
+}
+
+/* Client Name: "Smitha - Chavara", "Anil Kumar - Karunagappally", "Bijesh - Varkala" */
+.clientTitle {
+  font-size:75px;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+  margin: 0;
+  text-shadow: 0 4px 18px rgba(0, 0, 0, 0.65);
+  transition: color 0.3s ease;
+}
+
+
+
+/* ===================================================
+   Responsive Breakpoints
+   =================================================== */
+
+@media (max-width: 1199px) {
+.clientTitle{font-size: 60px;}
+}
+
+
+@media (max-width: 991px) {
+  .homeProjectsSection {
+    padding: 0px;
+  }
+
+  .stackCardItem {
+    height: 72vh;
+    min-height: 480px;
+    margin-bottom: 20vh;
+    border-radius: 0;
+  }
+
+  .cardTopHeader {
+    padding: 30px 32px;
+  }
+
+  .cardBottomContent {
+padding: 32px 32px 65px;
+  }
+
+.clientTitle{font-size: 55px;}
+
+}
+
+@media (max-width: 767px) {
+  .homeProjectsSection {
+    padding:0;
+  }
+
+  .stackCardItem {
+    height: 65vh;
+    min-height: 420px;
+    margin-bottom: 16vh;
+    border-radius: 18px;
+  }
+
+  .cardTopHeader {
+    padding: 24px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .cardMainHeading {
+    font-size: 1.85rem;
+  }
+
+  .viewAllProjectsBtn {
+    padding: 7px 18px;
+    font-size: 0.8rem;
+  }
+
+  .cardBottomContent {
+         padding: 24px 20px 60px;
+
+    gap: 8px;
+  }
+
+  .categoryTag {
+    font-size: 0.74rem;
+    padding: 4px 12px;
+  }
+
+  .clientTitle {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .stackCardItem {
+    height: 60vh;
+    min-height: 380px;
+    margin-bottom: 14vh;
+    border-radius: 16px;
+  }
+
+  .cardMainHeading {
+    font-size: 1.6rem;
+  }
+
+  .clientTitle {
+    font-size: 1.35rem;
+  }
+}

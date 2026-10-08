@@ -1,0 +1,251 @@
+/* ===================================================
+   Footer Section
+   Strictly scoped under .footerSection to prevent style leakage.
+   All text tags (h3, h4, h5, p, span, a) styled via parent cover div.
+   =================================================== */
+
+.footerSection {
+  position: relative;
+  width: 100%;
+  background-color: #141B34;
+  color: #ffffff;
+  padding: 85px 0 45px;
+  border-top: 1px solid #9898984d;
+}
+
+/* 4-Column Grid */
+.footerSection .footerGrid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1.2fr 0.8fr;
+  column-gap: 40px;
+  row-gap: 45px;
+}
+
+/* Column General */
+.footerSection .footerCol {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Address & Phone Left Column */
+.footerSection .footerContactCol {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.footerSection .footerItem {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Label: "Address" / "Phone" via Cover Div */
+.footerSection .footerItem span {
+  font-size: 15px;
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  line-height: 1.2;
+}
+
+/* Address Text via Cover Div */
+.footerSection .footerItem h3 {
+  font-size: clamp(1.2rem, 1.6vw, 1.45rem);
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.35;
+  margin: 0;
+  max-width: 320px;
+  letter-spacing: -0.2px;
+}
+
+/* Phone Text via Cover Div */
+.footerSection .footerItem h4 {
+  font-size: clamp(1.25rem, 1.8vw, 1.55rem);
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.2;
+  margin: 0;
+  letter-spacing: -0.2px;
+}
+
+.footerSection .footerItem h4 a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footerSection .footerItem h4 a:hover {
+  color: #c9a581;
+  color: #fef200;
+}
+
+/* Column Header ("Main Pages", "Others", "Socials") via Cover Div */
+.footerSection .footerCol h5 {
+  font-size: 15px;
+  font-weight: 500;
+  color: #fff;
+  margin: 0 0 22px 0;
+  letter-spacing: 0.2px;
+}
+
+/* Navigation Links List via Cover Div */
+.footerSection .footerCol ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footerSection .footerCol ul li {
+  margin: 0;
+  padding: 0;
+}
+
+.footerSection .footerCol ul li a {
+  font-size:16px;
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.2s ease, transform 0.2s ease;
+  display: inline-block;
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+.footerSection .footerCol ul li a:hover {
+  color: #fef200;
+  transform: translateX(3px);
+}
+
+/* Footer Bottom Copyright Row */
+.footerSection .footerBottom {
+  margin-top: 75px;
+  padding-top: 25px;
+}
+
+/* Copyright Text via Cover Div */
+.footerSection .footerBottom p {
+  font-size: 16px;
+  color: #fff;
+  margin: 0;
+  letter-spacing: 0.2px;
+}
+
+/* ===================================================
+   Responsive Breakpoints
+   =================================================== */
+
+@media (max-width: 991px) {
+  .footerSection {
+    padding: 70px 0 40px;
+  }
+
+  .footerSection .footerGrid {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 35px;
+    row-gap: 40px;
+  }
+
+  .footerSection .footerBottom {
+    margin-top: 55px;
+  }
+}
+
+@media (max-width: 767px) {
+  .footerSection {
+    padding: 60px 0 35px;
+  }
+
+  /* .footerSection .footerGrid {
+    grid-template-columns: 1fr;
+    row-gap: 35px;
+  } */
+
+      .footerSection .footerGrid {
+        /* grid-template-columns: 1fr 1fr; */
+        row-gap: 28px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .footerSection .footerGrid .footerCol {
+    display: flex;
+    flex-wrap: wrap;
+    width: 28%;
+    flex: 1 0 auto;
+}
+
+  .footerSection .footerContactCol {
+    gap: 26px;
+  }
+
+  .footerSection .footerCol h5 {
+    margin-bottom: 16px;
+  }
+
+  .footerSection .footerCol ul {
+    gap: 10px;
+  }
+
+  .footerSection .footerBottom {
+    margin-top: 0px;
+  }
+
+.footerSection .footerItem h3 , .footerSection .footerItem h4{font-size: 17px;}
+.footerSection .footerCol ul li a {
+    font-size: 15px;}
+.footerCol.footerContactCol>div:first-child{
+margin-bottom: 42px;
+}
+
+.footerSection .footerBottom p{font-size: 15px;}
+
+}
+
+
+@media (max-width: 575px){
+
+      .footerSection .footerGrid .footerCol{
+             width: 46%;
+        margin-bottom: 42px;
+      }
+.footerSection .footerGrid{row-gap: 0;}
+    .footerSection .footerContactCol {
+        gap: 0;
+    }
+    .footerSection .footerCol h5{
+      font-size: 14px;
+    }
+
+}
+
+@media (max-width: 480px){
+      .footerSection .footerGrid .footerCol {
+        width: 100%;
+        margin-bottom: 42px;
+    }
+.footerSection .footerGrid>div:last-child{
+  margin-bottom: 0;
+}
+.footerSection .footerItem>* {
+    text-align: center;
+}
+
+.footerSection .footerItem h3, .footerSection .footerItem h4 {
+        text-align: center;
+        width: 100%;
+        font-size: 16px;
+        max-width: 100%;
+    }
+.footerSection .footerGrid .footerCol *{
+   text-align: center;
+}
+    .footerSection .footerBottom p {
+        text-align: center;
+    }
+
+
+}

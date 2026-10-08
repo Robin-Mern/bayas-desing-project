@@ -1,0 +1,258 @@
+/* ===================================================
+   HomeBlogs Section - "Insights & Inspirations"
+   Text elements (h2, h3, p, span) are styled strictly
+   through their parent cover div classes without direct classes.
+   =================================================== */
+
+.homeBlogsSection {
+  position: relative;
+  width: 100%;
+  background-color: #ffffff;
+  color: #111111;
+  padding: 120px 0 110px;
+}
+
+/* Header */
+.homeBlogsSection .blogsHeader {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.homeBlogsSection .blogsHeaderLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+/* "Blog" Pill Badge via parent cover div */
+.homeBlogsSection .blogsHeaderLeft>span {
+  display: inline-block;
+  background-color: #382822;
+  color: #ffffff;
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.54px;
+  line-height: 1.2;
+}
+
+/* "Insights & Inspirations" Heading via parent cover div */
+.homeBlogsSection .blogsHeaderLeft h2 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #111111;
+  margin: 0;
+  letter-spacing: -1.44px;
+  line-height: 1.15;
+}
+
+/* "See All Blogs ->" Button */
+.homeBlogsSection .seeAllBlogsBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #000000;
+  color: #ffffff;
+    padding: 12px 20px 12px 20px;
+  
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  white-space: nowrap;
+}
+
+.homeBlogsSection .seeAllBlogsBtn:hover {
+  background-color: #382822;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(56, 40, 34, 0.25);
+}
+
+.homeBlogsSection .seeAllBlogsBtn svg {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.1rem;
+  transition: transform 0.25s ease;
+}
+
+.homeBlogsSection .seeAllBlogsBtn:hover svg {
+  transform: translateX(4px);
+}
+
+/* 3-Column Grid */
+.homeBlogsSection .blogsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 28px;
+  row-gap: 36px;
+  align-items: start;
+}
+
+/* Individual Blog Card */
+.homeBlogsSection .blogCard {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+/* Image Cover Wrappers */
+.homeBlogsSection .blogImageWrapper {
+  position: relative;
+  width: 100%;
+  border-radius: 22px;
+  overflow: hidden;
+  background-color: #f3f0eb;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+}
+
+/* Card 1 & 3: Tall Aspect */
+.homeBlogsSection .blogImage-tall {
+  height: 420px;
+}
+
+/* Card 2: Shorter Landscape Aspect */
+.homeBlogsSection .blogImage-compact {
+  height: 280px;
+}
+
+.homeBlogsSection .blogImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.65s cubic-bezier(0.25, 1, 0.5, 1);
+  position: relative !important;
+}
+
+.homeBlogsSection .blogCard:hover .blogImage {
+  transform: scale(1.05);
+}
+
+/* Blog Card Cover Div */
+.homeBlogsSection .blogCardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 18px;
+}
+
+/* Date via Cover Div */
+.homeBlogsSection .blogCardContent p {
+  font-size: 16px;
+  color: #4E4C4B;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  line-height: 1.2;
+  margin: 0 0 4px;
+}
+
+/* Title via Cover Div */
+.homeBlogsSection .blogCardContent h5 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #111111;
+  line-height: 1.35;
+  margin: 0;
+  letter-spacing: -0.2px;
+  transition: color 0.2s ease;
+}
+
+.homeBlogsSection .blogCard:hover .blogCardContent h3 {
+  color: #382822;
+}
+
+/* ===================================================
+   Responsive Breakpoints
+   =================================================== */
+
+@media (max-width: 991px) {
+  .homeBlogsSection {
+    padding: 70px 0 85px;
+  }
+
+  .homeBlogsSection .blogsHeader {
+    margin-bottom: 36px;
+  }
+
+  .homeBlogsSection .blogsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 22px;
+    row-gap: 32px;
+  }
+
+  .homeBlogsSection .blogCard-compact {
+    grid-column: span 1;
+  }
+
+  .homeBlogsSection .blogImage-tall {
+    height: 320px;
+  }
+
+  .homeBlogsSection .blogImage-compact {
+    height: 320px;
+  }
+.homeBlogsSection .blogsHeaderLeft h2{font-size: 42px;}
+
+}
+
+@media (max-width:767px) {
+  .homeBlogsSection {
+    padding: 65px 0 65px;
+  }
+
+  .homeBlogsSection .blogsHeader {
+
+  }
+
+ 
+  .homeBlogsSection .blogImage-tall,
+  .homeBlogsSection .blogImage-compact {
+    /* height: 270px; */
+    /* height: auto; */
+  }
+
+  .homeBlogsSection .blogCardContent h3 {
+    font-size: 1.08rem;
+  }
+.homeBlogsSection .blogCardContent h5 {
+    font-size: 18px;
+    line-height: 1.3;
+}
+
+    .homeBlogsSection .blogsGrid {
+        gap: 45px 22px;
+    }
+.homeBlogsSection .blogsHeader {
+        margin-bottom: 50px;
+    }
+
+}
+
+@media (max-width:575px){
+   .homeBlogsSection .blogsGrid {
+    grid-template-columns: 1fr;
+           row-gap: 50px;
+  }
+  .homeBlogsSection .seeAllBlogsBtn{font-size: 15px;}
+    .homeBlogsSection .blogImage-tall, .homeBlogsSection .blogImage-compact {
+        height: auto;
+    }
+
+    .serviceInnerBanner h1 {
+        font-size: 35px;
+        line-height: 1.2;
+    }
+
+}

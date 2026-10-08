@@ -1,0 +1,540 @@
+.custonm-container{
+  max-width: 1350px ;
+  width: 98% ;
+  margin-inline: auto;
+}
+.serviceInnerBanner {
+  position: relative;
+  width: 100%;
+  min-height:520px;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 60px;
+  padding-top: 70px;
+  overflow: hidden;
+}
+
+.serviceBannerImageWrapper {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.serviceBannerImageWrapper img{
+    object-fit: cover;
+  object-position: center 30%;
+}
+.serviceBannerImg {
+  object-fit: cover;
+  /* object-position: center 30%; */
+}
+
+.serviceBannerOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(#0e142400 0%, #141b34a3 56%, #141b34f2 81%);
+}
+
+.serviceBannerContent {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.serviceInnerBanner h1 {
+  color: #ffffff;
+  font-size: 72px;
+  font-weight: 600;
+  margin: 0;
+  /* letter-spacing: -0.6px; */
+  text-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+  line-height: 1.2;
+}
+
+/* --------------------------------------------------------
+   Component 2: Service Content Section (Article + Sidebar)
+   -------------------------------------------------------- */
+.serviceDetailsContentSection {
+  padding: 75px 0 35px;
+  background-color: #ffffff;
+}
+
+.serviceContentGrid {
+  display: grid;
+  grid-template-columns: 1fr 375px;
+  gap: 52px;
+  align-items: start;
+}
+
+/* Left Column: Article */
+.serviceArticleWrapper li{
+  color: #413936;
+}
+.serviceArticleWrapper p {
+
+  line-height: 1.76;
+  color: #413936;
+  font-weight: 500;
+}
+
+.serviceArticleWrapper p:first-of-type {
+
+  line-height: 1.8;
+  color: #413936;
+
+}
+
+.serviceArticleWrapper h4 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #000;
+  margin-top: 34px;
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.serviceArticleWrapper h2:first-of-type {
+  margin-top: 10px;
+}
+.serviceArticleWrapper h2 {
+  font-size: 42px;
+  font-weight: 700;
+  color: #000;
+  margin-top: 34px;
+  margin-bottom: 16px;
+  line-height: 1.3;
+}
+.serviceArticleWrapper h3 {
+  font-size: 35px;
+  font-weight: 700;
+  color: #000;
+  margin-top: 34px;
+  margin-bottom: 16px;
+  line-height: 1.3;
+}
+.serviceArticleWrapper h5 {
+  font-size:22px;
+  font-weight: 700;
+  color: #000;
+  margin-top: 34px;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+/* Right Column: Sidebar */
+.serviceSidebarWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* 1. Get in Touch Card */
+.getInTouchCard {
+  background: #EEEDEA;
+  border: 1px solid #EEEDEA;
+  border-radius: 18px;
+  padding: 30px 24px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.03);
+}
+
+.getInTouchCard h3 {
+    font-size: 28px;
+    font-weight: 600;
+
+  color: #000;
+  margin: 0 0 20px 0;
+
+}
+
+.touchForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.touchFormGroup {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.touchFormGroup label {
+  font-weight: 500;
+  color: #000;
+  /* letter-spacing: 0.1px; */
+}
+
+.touchFormGroup input,
+.touchFormGroup textarea {
+  width: 100%;
+  padding: 10px 14px;
+  background: #ffffff;
+  border: 1px solid #dddbd5;
+  border-radius: 8px;
+ font-weight: 500;
+  color: #000;
+  outline: none;
+  font-family: inherit;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.touchFormGroup input:focus,
+.touchFormGroup textarea:focus {
+  border-color: #3C2417;
+  box-shadow: 0 0 0 3px rgba(60, 36, 23, 0.08);
+}
+.touchFormGroup input::placeholder,
+.touchFormGroup textarea::placeholder {
+  color: #8E8E8E;
+}
+.touchFormGroup textarea {
+  resize: vertical;
+  min-height: 95px;
+}
+/* #8E8E8E */
+.touchSubmitBtn {
+  width: 100%;
+  padding: 12px;
+  background: #000000;
+  color: #ffffff;
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+
+  cursor: pointer;
+  margin-top: 6px;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.touchSubmitBtn:hover {
+  background: #3c2417;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(60, 36, 23, 0.2);
+}
+
+/* 2. Promo Banner Card */
+.promoBannerCard {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  min-height: 310px;
+  padding: 40px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: #ffffff;
+  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.09);
+}
+
+.promoBgImageWrapper {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.promoBgImg {
+  object-fit: cover;
+  object-position: center;
+}
+
+.promoOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(18, 18, 18, 0.45) 0%,
+    rgba(18, 18, 18, 0.85) 65%,
+    rgba(18, 18, 18, 0.96) 100%
+  );
+}
+
+.promoCardBody {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+.promoBannerCard h3 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 8px 0;
+  line-height: 1.25;
+}
+.promoCardBody h3 span{
+  color: #ffffff;
+  display: block;
+  text-transform: none;
+      margin-bottom: 0;
+}
+
+.promoCardBody>span{
+  color: #fff;
+  font-size: 15px;
+  text-transform:uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.promoBannerCard p {
+     margin-bottom: 20px;
+  color: #fff;
+  line-height: 1.5;
+
+}
+.promoBannerCard p span{
+  display: block;
+}
+.exploreWorkBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #F6C138;
+  color: #111111;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 9px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  align-self: flex-start;
+  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.exploreWorkBtn:hover {
+  background: #e2ad25;
+  color: #111111;
+  transform: translateX(3px);
+  box-shadow: 0 4px 14px rgba(246, 193, 56, 0.35);
+}
+
+/* --------------------------------------------------------
+   Component 3: Architecture Portfolio
+   -------------------------------------------------------- */
+.servicePortfolioSection {
+  padding: 40px 0 85px;
+  background-color: #ffffff;
+}
+
+.servicePortfolioSection h2 {
+  font-size: 48px;
+  font-weight: 600;
+  color: #000;
+  text-align: center;
+  margin: 0 0 60px 0;
+}
+
+.portfolioGalleryGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.portfolioCardItem {
+  position: relative;
+  height: 195px;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  background-color: #f5f5f5;
+}
+
+.portfolioImg {
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.portfolioCardItem:hover .portfolioImg {
+  transform: scale(1.08);
+}
+
+.portfolioHoverOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(60, 36, 23, 0.15);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.portfolioCardItem:hover .portfolioHoverOverlay {
+  opacity: 1;
+}
+
+/* ========================================================
+   RESPONSIVE BREAKPOINTS
+   ======================================================== */
+
+@media (max-width: 1199px){
+  .serviceInnerBanner h1 {
+    font-size: 60px; 
+}
+.serviceArticleWrapper h2{font-size: 35px;}
+.serviceArticleWrapper h3{font-size: 30px;}
+
+}
+
+
+/* Tablet (max-width: 991.5px) */
+@media (max-width: 991px) {
+  .serviceInnerBanner {
+    min-height: 400px;
+    padding-top: 120px;
+    padding-bottom: 55px;
+  }
+
+  .serviceInnerBanner h1 {
+    font-size: 50px;
+  }
+
+  .serviceDetailsContentSection {
+    padding: 60px 0 30px;
+  }
+
+  .serviceContentGrid {
+    grid-template-columns: 1fr;
+    gap: 44px;
+  }
+
+  .serviceSidebarWrapper {
+    max-width: 520px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .servicePortfolioSection {
+    padding: 35px 0 70px;
+  }
+
+  .servicePortfolioSection h2 {
+    font-size: 30px;
+    margin-bottom: 32px;
+  }
+
+  .portfolioGalleryGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .portfolioCardItem {
+    height: 180px;
+  }
+.servicePortfolioSection h2{font-size: 42px;}
+
+}
+
+/* Mobile (max-width: 767.5px) */
+@media (max-width: 767px) {
+  .serviceInnerBanner {
+    min-height: 340px;
+    padding-top: 100px;
+    padding-bottom: 45px;
+  }
+
+  .serviceInnerBanner h1 {
+    font-size: 45px;
+    /* letter-spacing: -0.3px; */
+  }
+
+  .serviceDetailsContentSection {
+    padding: 45px 0 20px;
+  }
+
+  .serviceArticleWrapper p {
+    font-size: 14px;
+    line-height: 1.68;
+    margin-bottom: 18px;
+  }
+
+  .serviceArticleWrapper p:first-of-type {
+    font-size: 14.5px;
+    margin-bottom: 22px;
+  }
+
+  .serviceArticleWrapper h2 {
+    font-size: 30px;
+    margin-top: 26px;
+    margin-bottom: 10px;
+  }
+    .serviceArticleWrapper h3 {
+        font-size: 26px;
+    }
+
+  .serviceArticleWrapper h4 {
+        font-size: 22px;
+    }
+
+.serviceArticleWrapper h5 {
+        font-size: 20px;
+    }
+
+
+  .getInTouchCard {
+    padding: 22px 18px;
+    border-radius: 14px;
+  }
+
+
+
+  .promoBannerCard {
+    min-height: auto;
+        padding: 30px 18px;
+    justify-content: center;
+    border-radius: 14px;
+  }
+
+  .promoBannerCard h3 {
+    /* font-size: 20px; */
+  }
+
+  .servicePortfolioSection {
+    padding: 25px 0 55px;
+  }
+
+  .servicePortfolioSection h2 {
+        font-size: 35px;
+  }
+
+  .portfolioGalleryGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .portfolioCardItem {
+    height: 140px;
+    border-radius: 10px;
+  }
+.promoCardBody > span{font-size: 13px; margin-bottom: 4px;}
+.promoBannerCard h3 span{display: inline;}
+  .custonm-container {
+    width: 90%;}
+
+}
+
+
+@media (max-width: 575px){
+  .serviceArticleWrapper p ,  .serviceArticleWrapper li{font-size: 15px;}
+  .getInTouchCard h3 {
+ font-size: 25px;
+  }
+
+  .touchFormGroup label, .touchFormGroup input, .touchFormGroup textarea {
+    font-size: 15px;}
+    .promoBannerCard p {
+    line-height: 1.4;
+    font-size: 15px;
+    }
+
+.promoBannerCard h3 {font-size: 28px;}
+.exploreWorkBtn{font-size: 15px;}
+  .servicePortfolioSection h2 {
+        font-size: 30px;
+  }
+
+
+}

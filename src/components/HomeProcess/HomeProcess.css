@@ -1,0 +1,280 @@
+
+
+.homeProcessSection {
+  position: relative;
+  width: 100%;
+  background-color: #f1eee9;
+  color: #12192c;
+  padding: 80px 0 110px;
+}
+
+/* Header */
+.processHeader {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 80px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.processHeaderLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+/* "Process" Pill Badge */
+.processBadge {
+  display: inline-block;
+  background-color: #260E01;
+  color: #ffffff;
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-size:15px;
+  font-weight: 600;
+  letter-spacing: -0.54px;
+  line-height: 1.2;
+  border: 1px solid #260E01 ;
+}
+
+/* "Our Working Process" Title */
+.processHeaderLeft h2 {
+  font-size:48px;
+  font-weight: 700;
+  color: #111111;
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+/* "Contact Us ->" Button */
+.processContactBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #ffffff;
+  color: #000;
+  padding: 10px 24px;
+  border-radius: 50px;
+  font-size:16px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  white-space: nowrap;
+}
+
+.processContactBtn:hover {
+  background-color: #3c2417;
+  color: #ffffff;
+  transform: translateY(-2px);
+  /* box-shadow: 0 8px 20px rgba(18, 25, 44, 0.2); */
+}
+
+.processContactBtn .btnArrow {
+  font-size: 1.1rem;
+  transition: transform 0.2s ease;
+  display: inline-block;
+  line-height: 1;
+}
+
+.processContactBtn:hover .btnArrow {
+  transform: translateX(4px);
+}
+
+/* 2-Column Content Layout */
+.processContentGrid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 130px;
+  align-items: center;
+}
+
+/* Left Column: Accordion */
+.processAccordion {
+  display: flex;
+  flex-direction: column;
+}
+
+.accordionItem {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  padding: 22px 0;
+  transition: all 0.3s ease;
+}
+
+.accordionHeaderBtn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  text-align: left;
+}
+.processAccordion>div:first-child{
+        border-top: 1px solid #00000026;
+}
+.accordionTitleWrapper {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+}
+
+.stepNumber {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #111111;
+  letter-spacing: 0.5px;
+}
+
+.stepName {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111111;
+  transition: color 0.2s ease;
+}
+
+.accordionItem.active .stepName,
+.accordionItem:hover .stepName {
+  color: #3C2417;
+}
+
+/* Toggle Icon (+ or ×) */
+.toggleIcon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  font-weight: 400;
+  color: #1a1715;
+  transition: transform 0.3s ease;
+  line-height: 1;
+}
+
+.accordionItem.active .toggleIcon {
+  transform: rotate(45deg);
+}
+
+/* Accordion Expandable Body */
+.accordionBody {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+              opacity 0.35s ease, 
+              padding-top 0.3s ease;
+  opacity: 0;
+}
+
+.accordionItem.active .accordionBody {
+  max-height: 200px;
+  opacity: 1;
+  padding-top: 14px;
+}
+
+.accordionBody p {
+  font-size:16px;
+  line-height: 1.6;
+  color: #4E4C4B;
+  margin: 0;
+  padding-left: 36px;
+  max-width: 520px;
+}
+
+/* Right Column: Framed Showcase Image */
+.processImageContainer {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Asymmetric White Backplate Card */
+.processImageBackdrop {
+  position: absolute;
+  inset: -12px;
+  background-color: #ffffff;
+  border-radius: 20px;
+transform: rotate(5deg);
+    box-shadow: 0 20px 45px #00000012;
+    height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.processImageFrame {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  border-radius: 22px;
+  overflow: hidden;
+  z-index: 2;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.processImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.processImageFrame:hover .processImage {
+  transform: scale(1.04);
+}
+
+/* ===================================================
+   Responsive Breakpoints
+   =================================================== */
+
+@media (max-width: 991px) {
+  .homeProcessSection {
+    padding: 60px 0 80px;
+  }
+
+  .processContentGrid {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .processImageFrame {
+    height: 340px;
+  }
+.processImageFrame img {
+    position: relative !important;
+}
+
+.processImageFrame {width: 95%;        height: auto;}
+.processHeaderLeft h2{font-size: 42px;}
+.processImageBackdrop {
+    inset: 6px;
+    width: 98%;
+}
+
+
+}
+
+@media (max-width: 640px) {
+  .homeProcessSection {
+    padding: 45px 0 65px;
+  }
+
+  .processHeader {
+    margin-bottom: 30px;
+  }
+
+  .processImageFrame {
+    height: 270px;
+  }
+
+  .accordionText {
+    padding-left: 0;
+  }
+}

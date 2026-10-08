@@ -1,0 +1,267 @@
+/* ===================================================
+   HomeDealIn Section - "We Deal In" Products Grid
+   =================================================== */
+
+.homeDealInSection {
+  position: relative;
+  width: 100%;
+  background-color: #f1eee9;
+  color: #12192c;
+  padding: 100px 0 70px;
+}
+
+.dealInHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 65px;
+}
+
+/* "Our Products" Badge */
+.dealInBadge {
+  display: inline-block;
+  background-color: #260E01;
+  border:1px solid #260E01;
+  color: #ffffff;
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-size:15px;
+  font-weight: 500;
+  letter-spacing: -0.72px;
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+
+/* "We Deal In" Main Title */
+.dealInTitle {
+
+}
+.dealInHeader h2{
+  font-size:48px;
+  font-weight: 700;
+  color: #000;
+  margin: 0 0 10px 0;
+  letter-spacing: -0.6px;
+}
+
+/* Subtitle */
+.dealInHeader p {
+
+  color: #000;
+  max-width: 700px;
+  line-height: 1.5;
+  margin: 0 auto;
+}
+
+/* Product Cards Grid: 3 in top row, 2 in bottom row */
+/* .dealInGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  width: 100%;
+} */
+
+.dealInGrid>a {
+    width: calc(33.33% - 20px);
+    display: flex;
+    flex: 1 0 auto;
+}
+.dealInGrid {
+    gap: 22px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* The bottom row with 2 cards */
+.dealInCardWide {
+  grid-column: span 1;
+}
+
+/* Make bottom 2 cards span 1.5 columns each on 3-col grid */
+.dealInRowBottom {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+  width: 100%;
+  margin-top: 22px;
+}
+
+/* Individual Product Card */
+.dealInCard {
+  position: relative;
+  width: 100%;
+  height: 330px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  background-color: #211c19;
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.dealInCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.16);
+}
+
+/* Card Image */
+.dealInCardImageWrapper {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.dealInCardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.7s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.dealInCard:hover .dealInCardImage {
+  transform: scale(1.05);
+}
+
+/* Dark Soft Vignette */
+.dealInCardOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(15, 12, 10, 0.4) 0%,
+    rgba(15, 12, 10, 0.05) 35%,
+    rgba(15, 12, 10, 0.15) 60%,
+    rgba(15, 12, 10, 0.65) 100%
+  );
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Top Badge inside Card ("Hanging Wood Simple Light") */
+.dealInCardTag {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 3;
+  background-color: #ffffff;
+  color: #111111;
+border-radius: 11px;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 400;
+  letter-spacing: 0.2px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+
+/* Bottom "Shop Now ->" Pill Button */
+.dealInShopBtn {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #1212121f;
+  backdrop-filter: blur(10px);
+  color: #ffffff;
+  padding: 6px 16px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  transition: all 0.25s ease;
+}
+.dealInShopBtn>span:first-child{
+  font-weight: 500;
+}
+
+
+.dealInCard:hover .dealInShopBtn {
+  background-color: #ffffff;
+  color: #12192c;
+  border-color: #ffffff;
+}
+
+.dealInShopBtn .btnArrow {
+  font-size: 0.95rem;
+  transition: transform 0.2s ease;
+  display: inline-block;
+  line-height: 1;
+}
+
+.dealInCard:hover .dealInShopBtn .btnArrow {
+  transform: translateX(3px);
+}
+
+.dealInGrid > a img{border-radius: 20px;}
+
+/* ===================================================
+   Responsive Breakpoints
+   =================================================== */
+
+@media (max-width: 991px) {
+  .homeDealInSection {
+    padding: 70px 0 60px;
+  }
+
+  .dealInGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dealInRowBottom {
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 22px;
+  }
+
+  .dealInCard {
+    height: 290px;
+  }
+.dealInHeader h2{font-size: 42px;}
+
+
+}
+
+@media (max-width: 767px) {
+  .homeDealInSection {
+    padding: 50px 0;
+  }
+
+  .dealInHeader {
+    margin-bottom: 30px;
+  }
+.dealInGrid>a {
+    width: calc(48% - 20px);
+    display: flex;
+    flex: 1 0 auto;
+}
+  .dealInGrid,
+  .dealInRowBottom {
+    /* grid-template-columns: 1fr; */
+    gap: 16px;
+  }
+
+  .dealInRowBottom {
+    margin-top: 16px;
+  }
+
+  .dealInCard {
+    height: 260px;
+    border-radius: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dealInGrid>a {
+    width: 100%;
+  }
+}

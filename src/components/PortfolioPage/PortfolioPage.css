@@ -1,0 +1,602 @@
+/* ========================================================
+   PORTFOLIO PAGE STYLES
+   ======================================================== */
+
+.portfolioPageSection {
+  padding-top: 50px;
+  padding-bottom: 60px;
+  background-color: #ffffff;
+  min-height: 80vh;
+}
+
+/* --------------------------------------------------------
+   Top Category Filter Tabs
+   -------------------------------------------------------- */
+.portfolioFilterNav {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 44px;
+}
+
+.portfolioFilterTabs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.filterTabBtn {
+  background-color: #FFF6B8;
+  color: #3C2417;
+  border: none;
+  border-radius: 9999px;
+  padding: 8px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  letter-spacing: 0.1px;
+  border:1px solid transparent;
+}
+
+.filterTabBtn:hover {
+  background-color: #feef8c;
+  transform: translateY(-1px);
+}
+
+.filterTabBtn.active {
+  background-color: #3C2417;
+  color: #ffffff;
+  /* box-shadow: 0 4px 14px rgba(31, 29, 26, 0.22); */
+}
+
+.filterTabBtn.active:hover {
+  background-color: #fff;
+  color: #3C2417;
+  border-color: #3C2417;
+  transform: translateY(-1px);
+}
+
+/* --------------------------------------------------------
+   Portfolio Responsive Flex Grid Layout
+   -------------------------------------------------------- */
+.portfolioFlexGrid {
+  display: flex;
+  flex-wrap: wrap;
+  margin-inline: -14px;
+  row-gap: 36px;
+  transition: opacity 0.22s ease, transform 0.22s ease;
+}
+
+.portfolioFlexGrid.filtering {
+  opacity: 0.45;
+  transform: translateY(6px);
+}
+
+.portfolioCardCol {
+  padding-inline: 14px;
+  box-sizing: border-box;
+  flex: 0 0 33.3333%;
+  max-width: 33.3333%;
+  animation: cardEntrance 0.42s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes cardEntrance {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* --------------------------------------------------------
+   Individual Portfolio Card
+   -------------------------------------------------------- */
+.portfolioCard {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  cursor: pointer;
+  outline: none;
+  transition: transform 0.25s ease;
+}
+
+.portfolioCard:hover {
+  transform: translateY(-3px);
+}
+
+/* Media & Carousel Container */
+.portfolioMediaContainer {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 18px;
+  overflow: hidden;
+  background-color: #f0eee9;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+}
+
+.portfolioImageWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.portfolioCardImg {
+  object-fit: cover;
+  transition: transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.portfolioCard:hover .portfolioCardImg {
+  transform: scale(1.035);
+}
+
+/* Category Tag Badge */
+.portfolioBadge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 3;
+  background-color: #FFF6B8;
+  color: #413936;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 4px 14px;
+  border-radius: 9999px;
+  letter-spacing: 0.2px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  pointer-events: none;
+}
+
+/* Carousel Navigation Arrows */
+.carouselNavBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 4;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0.9;
+}
+
+.carouselNavPrev {
+  left: 12px;
+}
+
+.carouselNavNext {
+  right: 12px;
+}
+
+.carouselNavBtn:hover {
+  background-color: #ffffff;
+  opacity: 1;
+  transform: translateY(-50%) scale(1.12);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.carouselNavIcon {
+  font-size: 16px;
+  stroke-width: 2.2px;
+}
+
+/* Slide Indicator Dots */
+.carouselDots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.carouselDot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.55);
+  transition: all 0.25s ease;
+}
+
+.carouselDot.active {
+  background-color: #ffffff;
+  width: 12px;
+  border-radius: 9999px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Card Info Bottom Row */
+.portfolioInfoRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 14px;
+  padding-inline: 4px;
+}
+
+.portfolioInfoRow h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111111;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.portfolioActionBtn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #F8DF49;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #111111;
+  cursor: pointer;
+  flex-shrink: 0;
+  margin-left: 12px;
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1),
+              background-color 0.2s ease,
+              box-shadow 0.25s ease;
+}
+
+.portfolioActionBtn:hover {
+  transform: scale(1.12) rotate(-15deg);
+  background-color: #f7d825;
+  box-shadow: 0 4px 12px rgba(248, 223, 73, 0.45);
+}
+
+.portfolioActionIcon {
+  font-size: 18px;
+}
+
+/* --------------------------------------------------------
+   Load More Button
+   -------------------------------------------------------- */
+.loadMoreWrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 52px;
+  margin-bottom: 20px;
+}
+
+.loadMoreBtn {
+  background-color: #0A0A0A;
+  color: #ffffff;
+  padding: 12px 34px;
+  border-radius: 9999px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  letter-spacing: 0.2px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+}
+
+.loadMoreBtn:hover:not(:disabled) {
+  background-color: #2c2b29;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.loadMoreBtn:disabled {
+  opacity: 0.85;
+  cursor: not-allowed;
+}
+
+.loadMoreSpinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  display: inline-block;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Empty State */
+.portfolioEmptyState {
+  text-align: center;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.portfolioEmptyState p {
+  font-size: 16px;
+  color: #666666;
+  margin: 0;
+}
+
+/* --------------------------------------------------------
+   Quick Details Lightbox Modal
+   -------------------------------------------------------- */
+.portfolioModalBackdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: backdropFade 0.25s ease both;
+}
+
+@keyframes backdropFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.portfolioModalContent {
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 24px;
+  max-width: 620px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  animation: modalScaleUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes modalScaleUp {
+  from {
+    opacity: 0;
+    transform: scale(0.92) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.modalCloseBtn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.95);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  color: #1e1e1e;
+  transition: transform 0.2s ease;
+}
+
+.modalCloseBtn:hover {
+  transform: scale(1.1);
+}
+
+.modalImageContainer {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  background-color: #f2f0ec;
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+  overflow: hidden;
+}
+
+.modalMainImage {
+  object-fit: cover;
+}
+
+.modalBadge {
+  top: 18px;
+  left: 18px;
+}
+
+.modalBody {
+  padding: 24px 28px 30px;
+}
+
+.modalHeaderInfo {
+  margin-bottom: 18px;
+}
+
+.modalTitle {
+  font-size: 20px;
+  font-weight: 700;
+  color: #111111;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+}
+
+.modalLocation {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: #666666;
+  margin: 0;
+}
+
+.locationIcon {
+  color: #3C2417;
+}
+
+.modalHighlights {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 22px;
+  padding: 14px 16px;
+  background-color: #fbfaf8;
+  border-radius: 12px;
+}
+
+.highlightItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13.5px;
+  color: #333333;
+}
+
+.checkIcon {
+  color: #2e7d32;
+  flex-shrink: 0;
+}
+
+.modalGalleryRow {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 24px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.galleryThumbWrapper {
+  position: relative;
+  width: 90px;
+  height: 65px;
+  border-radius: 8px;
+  overflow: hidden;
+  flex-shrink: 0;
+  background-color: #eceae5;
+}
+
+.galleryThumbImg {
+  object-fit: cover;
+}
+
+.modalFooterAction {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.modalInquireBtn {
+  background-color: #3C2417;
+  color: #ffffff !important;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.modalInquireBtn:hover {
+  background-color: #553320;
+  transform: translateY(-1px);
+}
+
+
+
+/* Tablet (2 Columns) */
+@media (max-width: 991px) {
+  .portfolioCardCol {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .portfolioFlexGrid {
+    row-gap: 28px;
+  }
+}
+
+
+
+@media (max-width: 767px){
+
+.portfolioInfoRow h3{
+  font-size: 16px;
+}
+.portfolioActionBtn{
+  width: 33px;
+  height: 33px;
+}
+.portfolioActionIcon {
+    font-size: 15px;
+}
+
+}
+
+
+/* Mobile (1 Column) */
+@media (max-width: 575px) {
+  .portfolioCardCol {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .portfolioPageSection {
+    padding-top: 36px;
+    padding-bottom: 40px;
+  }
+
+  .portfolioFilterTabs {
+    gap: 8px;
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: 8px;
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .portfolioFilterTabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .filterTabBtn {
+    padding: 7px 18px;
+    font-size: 13px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+.loadMoreBtn{
+  font-size: 15px;
+}
+
+
+}

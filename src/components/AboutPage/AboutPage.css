@@ -1,0 +1,328 @@
+/* .headerWrapper:has(+.aboutPageWrapper) {
+    background: red;
+} */
+
+
+
+
+.aboutPageWrapper {
+  padding-top: 85px;
+  padding-bottom: 70px;
+  background-color: #ffffff;
+}
+
+/* --------------------------------------------------------
+   Top Story Section
+   -------------------------------------------------------- */
+.aboutStorySection {
+  margin-bottom: 75px;
+}
+
+.aboutHeaderRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 48px;
+  margin-bottom:60px;
+}
+
+.aboutTitleCol {
+  flex: 1;
+}
+
+.aboutStorySection h2 {
+  font-size: 48px;
+  font-weight: 500;
+  color: #000;
+  letter-spacing: -0.6px;
+  margin: 0;
+  line-height: 1.15;
+}
+
+.aboutTextCol {
+  flex: 1.35;
+  max-width: 620px;
+}
+
+.aboutTextCol p {
+  /* font-size: 15px; */
+  line-height: 1.68;
+  color: #000;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* Hero Banner Image */
+.aboutBannerImageWrapper {
+  position: relative;
+  width: 100%;
+  height: 520px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.05);
+}
+
+.aboutBannerImage {
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.aboutBannerImageWrapper:hover .aboutBannerImage {
+  transform: scale(1.02);
+}
+
+/* --------------------------------------------------------
+   Why Bayas / Quality Craftsmanship Section
+   -------------------------------------------------------- */
+.aboutWhySection {
+  text-align: center;
+  padding-top: 10px;
+}
+
+.whyHeader {
+  margin-bottom: 50px;
+}
+
+.whyBadge {
+  display: inline-block;
+  background-color: #FFFCBA;
+  color: #413936;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 50px;
+  margin-bottom: 14px;
+  letter-spacing: 0.2px;
+}
+
+.whyHeader h2 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #000;
+  margin: 0 0 10px 0;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+}
+
+.whyHeader p {
+  /* font-size: 15px; */
+  color: #000;
+  margin: 0;
+  font-weight: 400;
+  max-width: 800px;
+  margin-inline: auto;
+}
+
+/* 4 Feature Columns */
+.whyFeaturesGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  text-align: center;
+}
+
+.featureCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 12px 8px;
+  transition: transform 0.3s ease;
+}
+
+.featureCard:hover {
+  transform: translateY(-4px);
+}
+
+.featureIconContainer {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1c1917;
+  margin-bottom: 18px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.featureCard:hover .featureIconContainer {
+  transform: scale(1.12);
+  color: #a07038;
+}
+
+.featureIconSvg {
+  width: 36px;
+  height: 36px;
+}
+
+.featureCard h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #000;
+  margin: 0 0 8px 0;
+  letter-spacing: -0.2px;
+}
+
+.featureCard p {
+  font-size: 15px;
+  line-height: 1.62;
+  color: #777777;
+  margin: 0;
+  /* max-width: 240px; */
+}
+
+/* ========================================================
+   RESPONSIVE BREAKPOINTS
+   ======================================================== */
+
+/* Tablet (max-width: 991.5px) */
+@media (max-width: 991px) {
+  .aboutPageWrapper {
+    padding-top: 70px;
+    padding-bottom: 75px;
+  }
+
+  .aboutStorySection {
+    margin-bottom: 60px;
+  }
+
+  .aboutHeaderRow {
+    gap: 28px;
+    margin-bottom: 26px;
+  }
+
+  .aboutMainHeading {
+    font-size: 36px;
+  }
+
+  .aboutDescription {
+    font-size: 14.5px;
+  }
+
+  .aboutBannerImageWrapper {
+    height: 390px;
+    border-radius: 16px;
+  }
+
+  .whyHeader {
+    margin-bottom: 40px;
+  }
+
+ .whyHeader h2, .aboutStorySection h2 {
+    font-size: 42px;
+  }
+
+  .whyFeaturesGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 36px 24px;
+  }
+
+  .featureDescription {
+    max-width: 280px;
+  }
+}
+
+/* Mobile (max-width: 767.5px) */
+@media (max-width: 767px) {
+  .aboutPageWrapper {
+    padding-top: 55px;
+    padding-bottom: 55px;
+  }
+
+  .aboutStorySection {
+    margin-bottom: 45px;
+  }
+
+  .aboutHeaderRow {
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 22px;
+  }
+
+  .aboutTitleCol,
+  .aboutTextCol {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .aboutMainHeading {
+    font-size: 30px;
+    letter-spacing: -0.4px;
+  }
+
+  .aboutDescription {
+    font-size: 14px;
+    line-height: 1.65;
+    color: #666666;
+  }
+
+  .aboutBannerImageWrapper {
+    height: 235px;
+    border-radius: 14px;
+  }
+
+  .whyHeader {
+    margin-bottom: 34px;
+  }
+
+  .whyBadge {
+    font-size: 12px;
+    padding: 4px 14px;
+    margin-bottom: 10px;
+  }
+    .whyHeader h2 ,.aboutStorySection h2 {
+        font-size: 35px;
+        
+    margin-bottom: 8px;
+    }
+
+
+  .whySubtitle {
+    font-size: 13.5px;
+    padding-inline: 10px;
+  }
+
+  .whyFeaturesGrid {
+          grid-template-columns: 1fr 1fr;
+    gap: 28px;
+  }
+
+  .featureCard {
+    max-width: 320px;
+    margin: 0 auto;
+    padding: 8px 4px;
+  }
+
+  .featureIconContainer {
+    width: 46px;
+    height: 46px;
+    margin-bottom: 12px;
+  }
+
+  .featureIconSvg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .featureTitle {
+    font-size: 17px;
+    margin-bottom: 6px;
+  }
+
+  .featureDescription {
+    font-size: 13.5px;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 575px) {
+
+    .whyHeader h2 , .aboutStorySection h2 {
+      font-family: 30px;
+    }
+  .whyFeaturesGrid {
+          grid-template-columns:1fr;
+        }
+
+}

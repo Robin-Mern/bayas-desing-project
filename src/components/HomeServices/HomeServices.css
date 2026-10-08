@@ -1,0 +1,165 @@
+/* ===================================================
+   HomeServices Section - "Our Services" Cards
+   =================================================== */
+
+.homeServicesSection {
+  position: relative;
+  width: 100%;
+  background-color: #EEEDEA;
+  color: #12192c;
+  padding: 95px 0 110px;
+}
+
+/* Header */
+.servicesHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+/* "What We Do" Pill Badge */
+.servicesBadge {
+  display: inline-block;
+  background-color: #382822;
+  color: #ffffff;
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-size:15px;
+  font-weight: 600;
+  letter-spacing: -.54px;
+}
+
+/* "Our Services" Title */
+.servicesHeader h2 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #111111;
+  margin: 12px 0 0 0;
+  letter-spacing: -0.5px;
+}
+
+/* Services Cards List */
+.servicesList {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Individual Service Card */
+.serviceCard {
+  background-color: #ffffff;
+  border-radius: 24px;
+  padding: 32px 36px;
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 40px;
+    align-items: start;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+}
+
+.serviceCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.08);
+}
+
+/* Card Left: Typography */
+.serviceCardContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 460px;
+}
+
+.serviceCardContent h3 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #111111;
+  margin: 0 0 12px 0;
+  letter-spacing: -0.3px;
+  transition: color 0.25s ease;
+}
+
+.serviceCard:hover .serviceCardTitle {
+  color: #a07038;
+}
+
+.serviceCardContent p {
+  line-height: 1.65;
+  color: #413936;
+  margin: 0;
+}
+
+/* Card Right: Framed Image */
+.serviceCardImageWrapper {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+.serviceCardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.7s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.serviceCard:hover .serviceCardImage {
+  transform: scale(1.04);
+}
+
+/* ===================================================
+   Responsive Breakpoints
+   =================================================== */
+
+
+@media (max-width: 1199px) {
+  .serviceCardContent{padding-right: 35px;}
+}
+
+@media (max-width: 991px) {
+  .homeServicesSection {
+    padding: 65px 0 75px;
+  }
+
+  .serviceCard {
+    padding: 24px 28px;
+    gap: 30px;
+  }
+
+  .serviceCardImageWrapper {
+    height: 190px;
+  }
+
+.servicesHeader h2{font-size: 42px;}
+.serviceCardContent h3{font-size: 24px;}
+}
+
+@media (max-width: 767px) {
+  .homeServicesSection {
+    padding: 50px 0 60px;
+  }
+
+  .servicesHeader {
+    margin-bottom: 28px;
+  }
+
+  .serviceCard {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    padding: 24px 20px;
+    border-radius: 18px;
+  }
+
+  .serviceCardImageWrapper {
+    height: 200px;
+  }
+}
