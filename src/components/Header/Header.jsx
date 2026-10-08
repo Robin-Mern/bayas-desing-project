@@ -132,7 +132,7 @@ function Header() {
                                     <ul className={`dropdown-menu customDropdownMenu ${activeDropdown === 'products' ? 'show' : ''}`}>
                                         <li><Link className="dropdown-item customDropdownItem" href="/products" onClick={closeAllMenus}>All Products</Link></li>
                                         <li><Link className="dropdown-item customDropdownItem" href="/products" onClick={closeAllMenus}>Lighting & Decor</Link></li>
-                                        <li><Link className="dropdown-item customDropdownItem" href="/products" onClick={closeAllMenus}>Wall Art Lights</Link></li>
+                                        <li><Link className="dropdown-item customDropdownItem" href="/product-detail" onClick={closeAllMenus}>Wall Art Lights</Link></li>
                                     </ul>
                                 </li>
 

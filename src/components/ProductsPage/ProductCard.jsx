@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function ProductCard({ product }) {
   const { title, price, originalPrice, image } = product;
@@ -9,7 +10,7 @@ export default function ProductCard({ product }) {
   return (
     <article className="productCard">
       {/* Product Image Frame */}
-      <div className="productImageWrapper">
+      <Link href="/product-detail" className="productImageWrapper">
         <Image
           src={image}
           alt={title}
@@ -19,11 +20,13 @@ export default function ProductCard({ product }) {
           quality={88}
         />
         <div className="productImageGlow" />
-      </div>
+      </Link>
 
       {/* Product Details (no classes on h3 or p) */}
       <div className="productDetails">
-        <h3>{title}</h3>
+        <Link href="/product-detail">
+          <h3>{title}</h3>
+        </Link>
         <div className="productPricing">
           <span className="priceCurrent">FROM RS {price}</span>
           {originalPrice && <span className="priceOriginal">RS {originalPrice}</span>}
