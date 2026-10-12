@@ -20,13 +20,15 @@ export default function PortfolioDetailPage() {
       {/* 2. Service Portfolio Section */}
       <ServicePortfolio />
 
-      {/* 3. More Projects Slider like attached image */}
+      {/* 3. Home Testimonials Section */}
+      <HomeTestimonials />
+
+      {/* 4. More Projects Slider like attached image */}
       <Suspense fallback={null}>
         <MoreProjectsSlider />
       </Suspense>
 
-      {/* 4. Home Testimonials Section */}
-      <HomeTestimonials />
+      
     </main>
   );
 }
