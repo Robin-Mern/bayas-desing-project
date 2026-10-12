@@ -340,12 +340,15 @@
 
 .portfolioCardItem {
   position: relative;
-  height: 195px;
   border-radius: 14px;
   overflow: hidden;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
   cursor: pointer;
   background-color: #f5f5f5;
+}
+
+.portfolioCardItem img {
+    position: relative !important;
 }
 
 .portfolioImg {
