@@ -10,7 +10,7 @@
 
 /* 1. Header & Breadcrumb */
 .projectHeaderSection {
-  padding-top: 45px;
+  padding-top: 70px;
   padding-bottom: 24px;
 }
 
@@ -35,6 +35,49 @@
   transform: translateX(-3px);
 }
 
+.project-breadcrumbs {
+    width: 100%;
+    display: block;
+}
+
+.project-breadcrumbs ul {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: end;
+    gap: 16px;
+}
+
+.project-breadcrumbs ul li, .project-breadcrumbs ul li a {
+    font-size: 16px;
+    color: #000000;
+    text-decoration: none;
+    transition: all 0.25s ease-in;
+}
+
+.project-breadcrumbs ul li a:hover {
+    color: #f4e968;
+}
+
+.project-breadcrumbs ul li {
+    width: auto;
+    position: relative;
+}
+
+.project-breadcrumbs ul li:after {
+    content: "/";
+    position: absolute;
+    right: -12px;
+    display:inline-block;
+}
+
+.project-breadcrumbs ul li:last-child:after {
+    content:"";
+    display:none;
+}
+
 .projectTitleBlock {
   display: flex;
   flex-direction: column;
@@ -53,11 +96,11 @@
 }
 
 .projectTitle {
-  font-size: 42px;
-  font-weight: 700;
-  color: #111827;
-  letter-spacing: -0.6px;
+  color: #000;
+  letter-spacing: -.6px;
   margin: 0;
+  font-size: 44px;
+  font-weight: 500;
   line-height: 1.15;
 }
 
@@ -77,12 +120,13 @@
 /* 2. Featured Image & Thumbnails */
 .projectHeroMediaSection {
   margin-bottom: 45px;
+  margin-top: 50px;
 }
 
 .projectFeaturedImageFrame {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 16 / 7.25;
   border-radius: 20px;
   overflow: hidden;
   background-color: #f3f4f6;
@@ -190,19 +234,30 @@
 
 /* 4. Story & Narrative */
 .projectStorySection {
+  margin-top: 75px;
   margin-bottom: 75px;
 }
 
 .projectStoryGrid {
-  display: grid;
-  grid-template-columns: 1.4fr 1fr;
-  gap: 56px;
-  align-items: start;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5%;
 }
 
 .storyLeftCol {
   display: flex;
   flex-direction: column;
+}
+
+.projectStoryGrid .storyRightCol {
+    width: 31%;
+}
+
+.projectStoryGrid .storyLeftCol {
+    width: 64%;
+    flex-direction: column;
+    display: flex;
 }
 
 .storySectionSub {
@@ -231,7 +286,7 @@
 }
 
 .highlightsBox {
-  background-color: #f8f6f3;
+  background-color: #E8E7E1;
   border-radius: 16px;
   padding: 34px 28px;
 }

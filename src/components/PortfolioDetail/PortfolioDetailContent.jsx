@@ -48,21 +48,27 @@ export default function PortfolioDetailContent() {
       {/* 1. Top Breadcrumb & Title Section */}
       <section className="projectHeaderSection">
         <div className="container">
-          <Link href="/portfolio" className="backToPortfolioBtn">
-            <RxArrowLeft size={18} />
-            <span>Back to All Projects</span>
-          </Link>
+          
+          <div className="project-breadcrumbs">
+            <ul>
+              <li><Link href="/">Home</Link></li>
+              <li><Link href="/portfolio">Portfolio</Link></li>
+              <li>{project.title}</li>
+            </ul>
+          </div>
 
           <div className="projectTitleBlock">
-            <span className="projectCategoryBadge">
+            {/* <span className="projectCategoryBadge">
               {project.categoryBadge || 'Villas'}
-            </span>
+            </span> */}
             <h1 className="projectTitle">{project.title}</h1>
-            <p className="projectLocation">
+            {/* <p className="projectLocation">
               <FiMapPin className="pinIcon" />
               <span>{project.location || 'Chavara, Kollam'}</span>
-            </p>
+            </p> */}
           </div>
+
+          
         </div>
       </section>
 
@@ -80,36 +86,12 @@ export default function PortfolioDetailContent() {
             />
           </div>
 
-          {/* Thumbnails Row */}
-          {images.length > 1 && (
-            <div className="projectThumbsRow" role="tablist" aria-label="Project photo gallery">
-              {images.map((img, idx) => (
-                <button
-                  key={idx}
-                  type="button"
-                  role="tab"
-                  aria-selected={activeImageIndex === idx}
-                  className={`projectThumbBtn ${activeImageIndex === idx ? 'active' : ''}`}
-                  onClick={() => setActiveImageIndex(idx)}
-                >
-                  <div className="projectThumbWrapper">
-                    <Image
-                      src={img}
-                      alt={`Photo ${idx + 1}`}
-                      fill
-                      className="projectThumbImg"
-                      sizes="120px"
-                    />
-                  </div>
-                </button>
-              ))}
-            </div>
-          )}
+          
         </div>
       </section>
 
-      {/* 3. Project Metadata / Overview Grid */}
-      <section className="projectMetaSection">
+      
+      {/* <section className="projectMetaSection">
         <div className="container">
           <div className="projectMetaGrid">
             {projectMeta.map((item, idx) => {
@@ -128,13 +110,31 @@ export default function PortfolioDetailContent() {
             })}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* 4. Architectural Narrative & Scope Story */}
       <section className="projectStorySection">
         <div className="container">
           <div className="projectStoryGrid">
-            {/* Left Story Column */}
+
+            
+            <div className="storyRightCol">
+              <div className="highlightsBox">
+                <h3 className="highlightsTitle">Architectural Highlights</h3>
+                <ul className="highlightsList">
+                  {highlights.map((h, i) => (
+                    <li key={i} className="highlightListItem">
+                      <div className="checkIconWrap">
+                        <FiCheck size={16} />
+                      </div>
+                      <span>{h}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+            
+
             <div className="storyLeftCol">
               <span className="storySectionSub">Design Concept & Vision</span>
               <h2 className="storySectionHeading">
@@ -156,28 +156,14 @@ export default function PortfolioDetailContent() {
               </div>
             </div>
 
-            {/* Right Highlights Column */}
-            <div className="storyRightCol">
-              <div className="highlightsBox">
-                <h3 className="highlightsTitle">Architectural Highlights</h3>
-                <ul className="highlightsList">
-                  {highlights.map((h, i) => (
-                    <li key={i} className="highlightListItem">
-                      <div className="checkIconWrap">
-                        <FiCheck size={16} />
-                      </div>
-                      <span>{h}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
+            
+
           </div>
         </div>
       </section>
 
-      {/* 5. Curated Gallery Showcase */}
-      <section className="projectGalleryShowcaseSection">
+      
+      {/* <section className="projectGalleryShowcaseSection">
         <div className="container">
           <div className="gallerySectionHeader">
             <span className="gallerySub">Spatial Showcase</span>
@@ -212,7 +198,8 @@ export default function PortfolioDetailContent() {
             })}
           </div>
         </div>
-      </section>
+      </section> */}
+
     </div>
   );
 }
