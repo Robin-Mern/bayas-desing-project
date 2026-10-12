@@ -140,7 +140,7 @@ function Header() {
                                     <Link href="/portfolio" className={`nav-link linkItem ${pathname === '/portfolio' ? 'active' : ''}`} onClick={closeAllMenus}>Portfolio</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link href="/#testimonials" className="nav-link linkItem" onClick={closeAllMenus}>Testimonials</Link>
+                                    <Link href="/testimonials" className="nav-link linkItem" onClick={closeAllMenus}>Testimonials</Link>
                                 </li>
                                 <li className="nav-item">
                                     <Link href="/#blogs" className="nav-link linkItem" onClick={closeAllMenus}>Blogs</Link>
