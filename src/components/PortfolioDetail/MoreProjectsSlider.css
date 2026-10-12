@@ -1,0 +1,221 @@
+/* ========================================================
+   MORE PROJECTS SLIDER
+   Matching user uploaded design
+   ======================================================== */
+
+.moreProjectsSection {
+  padding: 70px 0 90px;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+/* Header: Left Arrow, Centered Title, Right Arrow */
+.moreProjectsHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 42px;
+  position: relative;
+}
+
+.moreProjectsTitle {
+  font-size: 40px;
+  font-weight: 700;
+  color: #111827;
+  letter-spacing: -0.6px;
+  margin: 0;
+  text-align: center;
+  flex: 1;
+}
+
+.sliderNavArrow {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #111827;
+  padding: 8px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s ease, transform 0.2s ease, background-color 0.2s ease;
+  z-index: 2;
+}
+
+.sliderNavArrow:hover {
+  background-color: #f3f4f6;
+  transform: scale(1.08);
+}
+
+.sliderNavArrow:active {
+  transform: scale(0.96);
+}
+
+/* Track & Wrapper */
+.moreProjectsTrackWrapper {
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+  padding: 4px 0 16px;
+}
+
+.moreProjectsTrackWrapper::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+.moreProjectsTrack {
+  display: flex;
+  gap: 24px;
+}
+
+/* Card */
+.moreProjectCard {
+  flex: 0 0 calc((100% - 48px) / 3);
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.moreProjectCard:hover {
+  transform: translateY(-4px);
+}
+
+/* Image Wrapper & Badge */
+.moreProjectImgWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: #f3f4f6;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+}
+
+.moreProjectBadge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background-color: #fdf5b8;
+  color: #3f2f0a;
+  font-size: 12.5px;
+  font-weight: 600;
+  padding: 5px 16px;
+  border-radius: 20px;
+  z-index: 2;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  letter-spacing: 0.2px;
+}
+
+.moreProjectImg {
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.45s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.moreProjectCard:hover .moreProjectImg {
+  transform: scale(1.05);
+}
+
+/* Info Row */
+.moreProjectInfoRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 16px;
+  padding: 0 4px;
+  gap: 12px;
+}
+
+.moreProjectCardTitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: #111827;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  margin: 0;
+  flex: 1;
+  line-height: 1.35;
+  transition: color 0.2s ease;
+}
+
+.moreProjectCard:hover .moreProjectCardTitle {
+  color: #3c2417;
+}
+
+/* Circular Yellow Arrow Button */
+.moreProjectArrowBtn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #f4e968;
+  color: #111827;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  text-decoration: none;
+  transition: transform 0.22s ease, background-color 0.22s ease, box-shadow 0.22s ease;
+  box-shadow: 0 2px 10px rgba(244, 233, 104, 0.35);
+}
+
+.moreProjectArrowBtn:hover,
+.moreProjectCard:hover .moreProjectArrowBtn {
+  transform: scale(1.08);
+  background-color: #eedf52;
+  box-shadow: 0 4px 14px rgba(244, 233, 104, 0.5);
+}
+
+.moreProjectArrowIcon {
+  color: #111827;
+  transition: transform 0.2s ease;
+}
+
+.moreProjectCard:hover .moreProjectArrowIcon {
+  transform: translateX(2px);
+}
+
+/* --------------------------------------------------------
+   Responsive Breakpoints
+   -------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .moreProjectCard {
+    flex: 0 0 calc((100% - 24px) / 2);
+  }
+
+  .moreProjectsTitle {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 640px) {
+  .moreProjectsSection {
+    padding: 50px 0 70px;
+  }
+
+  .moreProjectsTitle {
+    font-size: 28px;
+  }
+
+  .moreProjectCard {
+    flex: 0 0 88%;
+  }
+
+  .moreProjectsTrack {
+    gap: 16px;
+  }
+
+  .moreProjectCardTitle {
+    font-size: 14.5px;
+  }
+
+  .moreProjectArrowBtn {
+    width: 38px;
+    height: 38px;
+  }
+}
+

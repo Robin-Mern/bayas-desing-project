@@ -2,10 +2,13 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 import { RxArrowRight } from 'react-icons/rx';
 
 export default function PortfolioCard({ project, onOpenDetails }) {
+  const router = useRouter();
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const images = project.images && project.images.length > 0
     ? project.images
@@ -24,9 +27,7 @@ export default function PortfolioCard({ project, onOpenDetails }) {
   };
 
   const handleCardClick = () => {
-    if (onOpenDetails) {
-      onOpenDetails(project);
-    }
+    router.push(`/portfolio-detail?id=${project.id}`);
   };
 
   return (
@@ -99,7 +100,7 @@ export default function PortfolioCard({ project, onOpenDetails }) {
           aria-label={`View details for ${project.title}`}
           onClick={(e) => {
             e.stopPropagation();
-            if (onOpenDetails) onOpenDetails(project);
+            router.push(`/portfolio-detail?id=${project.id}`);
           }}
         >
           <RxArrowRight className="portfolioActionIcon" />
