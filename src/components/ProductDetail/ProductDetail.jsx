@@ -11,7 +11,6 @@ const PRODUCT_IMAGES = [
   { id: 1, src: '/images/bull-wood-main.png', alt: 'Bull-wood Art Light - Front Ambient View' },
   { id: 2, src: '/images/bull-wood-thumb-1.png', alt: 'Bull-wood Art Light - Angle View' },
   { id: 3, src: '/images/bull-wood-thumb-2.png', alt: 'Bull-wood Art Light - Illumination Glow' },
-  { id: 4, src: '/images/bull-wood-thumb-3.png', alt: 'Bull-wood Art Light - Craftsmanship Detail' },
 ];
 
 const RELATED_PRODUCTS = [
