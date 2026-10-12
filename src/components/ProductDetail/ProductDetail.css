@@ -48,7 +48,6 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 56px;
-  align-items: start;
 }
 
 /* Gallery Column */
@@ -154,9 +153,9 @@
 }
 
 .productShortDescription {
-  font-size: 14.5px;
-  line-height: 1.7;
-  color: #58514b;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #665A56;
   margin-bottom: 28px;
 }
 
@@ -165,8 +164,9 @@
   display: flex;
   align-items: center;
   gap: 16px;
-  margin-bottom: 30px;
+  margin-bottom: 60px;
   flex-wrap: wrap;
+  margin-top: auto;
 }
 
 .quantitySelector {
@@ -219,7 +219,7 @@
   transition: background-color 0.25s ease, transform 0.2s ease, box-shadow 0.2s ease;
   box-shadow: 0 4px 14px rgba(43, 32, 26, 0.18);
   flex: 1;
-  max-width: 300px;
+  width: calc(100% - 140px);
 }
 
 .buyNowBtn:hover {
@@ -236,6 +236,8 @@
   background: #f3efea;
   border-radius: 10px;
   padding:10px 20px;
+  margin-top: auto;
+  margin-bottom: 20px;
 }
 
 .accordionItem {
@@ -323,13 +325,18 @@
   margin-bottom: 14px;
   display: flex;
   align-items: center;
+  width: 62px;
+  height: 62px;
+  background: #fff;
+  border-radius: 50%;
+  justify-content: center;
 }
 
 .perkIcon {
-  width: 24px;
-  height: 24px;
+  width: 32px;
+  height: 32px;
   stroke-width: 1.8;
-  color: #2b201a;
+  color: #3C2417;
 }
 
 .perkTitle {
@@ -341,9 +348,9 @@
 }
 
 .perkDesc {
-  font-size: 13px;
+  font-size: 15px;
   line-height: 1.5;
-  color: #655e57;
+  color: #807B75;
   margin: 0;
 }
 
