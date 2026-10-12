@@ -121,39 +121,32 @@ export default function PortfolioDetailContent() {
             <div className="storyRightCol">
               <div className="highlightsBox">
                 <h3 className="highlightsTitle">Architectural Highlights</h3>
-                <ul className="highlightsList">
-                  {highlights.map((h, i) => (
-                    <li key={i} className="highlightListItem">
-                      <div className="checkIconWrap">
-                        <FiCheck size={16} />
-                      </div>
-                      <span>{h}</span>
-                    </li>
-                  ))}
+                <ul>
+                  <li>{project.title}</li>
+                </ul>
+                <h3 className="highlightsTitle">Location</h3>
+                <ul>
+                  <li>
+                    <span>{project.location || 'Chavara, Kollam'}</span>
+                  </li>
+                </ul>
+                <h3 className="highlightsTitle">Project Type</h3>
+                <ul>
+                  <li>Interior Design</li>
+                </ul>
+                <h3 className="highlightsTitle">Project Size</h3>
+                <ul>
+                  <li>1,200 sq ft</li>
                 </ul>
               </div>
             </div>
-            
+
 
             <div className="storyLeftCol">
-              <span className="storySectionSub">Design Concept & Vision</span>
-              <h2 className="storySectionHeading">
-                A Tropical Sanctuary Rooted in Modernist Elegance
-              </h2>
-              <div className="storyParagraphs">
-                <p>
-                  Commissioned by Dr. Sreechith, this bespoke villa in Chavara stands as an ode to
-                  Kerala’s vernacular heritage reimagined through contemporary clean lines and high-volume
-                  spaces. Every contour of the residence was planned around the natural light trajectory
-                  and wind circulation, ensuring that each room remains naturally illuminated and ventilated.
-                </p>
-                <p>
-                  The interior design blends hand-selected teakwood, warm artisanal stone, and sleek
-                  matte finishes. A seamless transition connects the living and dining spaces to an
-                  internal tropical courtyard, bringing nature directly into everyday living while
-                  preserving personal family privacy.
-                </p>
-              </div>
+              <h2>Project Overview</h2>
+              <p>Smithа – Chavara is a thoughtfully designed residential interior project that brings together contemporary elegance, comfort, and everyday functionality. The design focuses on creating warm and inviting interiors with carefully selected materials, refined finishes, and a cohesive visual language. Each space was planned to reflect the character of the home while providing a comfortable environment for modern living.</p>
+              <h2>Client Goals</h2>
+              <p>The client wanted a sophisticated yet comfortable home that balanced contemporary aesthetics with practical functionality. Key priorities included creating well-organized spaces, selecting elegant materials and finishes, maximizing natural light, and establishing a consistent design language throughout the interiors. The goal was to create a home that feels refined, welcoming, and personalized to the client's lifestyle.</p>
             </div>
 
             

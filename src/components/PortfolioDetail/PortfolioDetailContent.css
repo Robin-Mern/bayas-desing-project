@@ -260,15 +260,6 @@
     display: flex;
 }
 
-.storySectionSub {
-  font-size: 13px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1.2px;
-  color: #3c2417;
-  margin-bottom: 10px;
-}
-
 .storySectionHeading {
   font-size: 34px;
   font-weight: 700;
@@ -287,8 +278,8 @@
 
 .highlightsBox {
   background-color: #E8E7E1;
-  border-radius: 16px;
-  padding: 34px 28px;
+  border-radius: 20px;
+  padding: 40px 34px;
 }
 
 .highlightsTitle {
