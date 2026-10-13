@@ -65,3 +65,51 @@ h2{
   letter-spacing: -1.44px;
   line-height: 1.15;
 }
+
+
+.common-breadcrumbs {
+    width: 100%;
+    margin: 20px 0 50px;
+}
+
+.common-breadcrumbs .page-breadcrumbs {
+    width: 100%;
+    display: block;
+}
+
+.common-breadcrumbs .page-breadcrumbs ul {
+    gap: 18px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+
+.common-breadcrumbs .page-breadcrumbs ul li, .common-breadcrumbs .page-breadcrumbs ul li a {
+    color: #000;
+    font-size: 16px;
+    text-decoration: none;
+    transition: all .25s ease-in;
+}
+
+.common-breadcrumbs .page-breadcrumbs ul li a:hover {
+     color:#f4e968;   
+}
+
+.common-breadcrumbs .page-breadcrumbs ul li {
+    width: auto;
+    position: relative;
+}
+
+.common-breadcrumbs .page-breadcrumbs ul li:after {
+    content: "/";
+    display: inline-block;
+    position: absolute;
+    right: -12px;
+}
+
+.common-breadcrumbs .page-breadcrumbs ul li:last-child:after {
+    content:;
+    display:none;
+}

@@ -21,6 +21,9 @@ export default function BlogPage() {
             </div>
 
             <div className="blog-content-row">
+
+                <div className="container">
+                
                 <h2>Insights & Inspirations</h2>
 
                 <div className="blog-content-grid">
@@ -32,7 +35,10 @@ export default function BlogPage() {
                                 <Link href="/">
                                     <Image
                                         src={blog.image}
-                                        alt={blog.title} />
+                                        alt={blog.title} 
+                                        width={420}
+                                        height={440}
+                                    />
                                 </Link>
                             </div>
                             <div className="blog-content">
@@ -46,6 +52,8 @@ export default function BlogPage() {
                 </div>
 
                 <Link href="" className="show-all-btn">Show More</Link>
+
+                </div>
 
             </div>
 

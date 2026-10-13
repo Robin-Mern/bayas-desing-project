@@ -143,7 +143,7 @@ function Header() {
                                     <Link href="/testimonials" className="nav-link linkItem" onClick={closeAllMenus}>Testimonials</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link href="/#blogs" className="nav-link linkItem" onClick={closeAllMenus}>Blogs</Link>
+                                    <Link href="/blog" className="nav-link linkItem" onClick={closeAllMenus}>Blogs</Link>
                                 </li>
                             </ul>
 
