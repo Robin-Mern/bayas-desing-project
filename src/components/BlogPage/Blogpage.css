@@ -32,6 +32,7 @@
 .blog-list-wrapper .blog-card {
     width: 32.28%;
     text-align: left;
+    text-decoration: none;
 }
 
 .blog-list-wrapper .blog-card img {
@@ -67,7 +68,7 @@
     padding: 2.2rem 0 1.5rem;
 }
 
-.blog-list-wrapper .blog-card a:hover img {
+.blog-list-wrapper .blog-card:hover img {
     filter: grayscale(1);
     transform: scale(1.05);
 }

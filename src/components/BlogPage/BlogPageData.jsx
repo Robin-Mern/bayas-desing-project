@@ -10,6 +10,11 @@ const blogData = [
         image: "/images/blog-img1.jpg",
         content: [
             {
+                type: "main-image",
+                src: "/images/blog-banner-main.jpg",
+                alt: ""
+            },
+            {
                 type: "text",
                 value: "Homebuyers in 2026 are looking beyond square footage and polished finishes. They want homes that support the way they actually live: flexible work schedules, changing family needs, lower running costs, and more time spent at home."
             },
@@ -46,6 +51,11 @@ const blogData = [
         date: "Apr 3, 2026",
         image: "/images/blog-img2.jpg",
         content: [
+            {
+                type: "main-image",
+                src: "/images/blog-banner-main.jpg",
+                alt: ""
+            },
             {
                 type: "text",
                 value: "Homebuyers in 2026 are looking beyond square footage and polished finishes. They want homes that support the way they actually live: flexible work schedules, changing family needs, lower running costs, and more time spent at home."
@@ -84,6 +94,11 @@ const blogData = [
         image: "/images/blog-img3.jpg",
         content: [
             {
+                type: "main-image",
+                src: "/images/blog-banner-main.jpg",
+                alt: ""
+            },
+            {
                 type: "text",
                 value: "Homebuyers in 2026 are looking beyond square footage and polished finishes. They want homes that support the way they actually live: flexible work schedules, changing family needs, lower running costs, and more time spent at home."
             },
@@ -120,6 +135,11 @@ const blogData = [
         date: "Apr 3, 2026",
         image: "/images/blog-img2.jpg",
         content: [
+            {
+                type: "main-image",
+                src: "/images/blog-banner-main.jpg",
+                alt: ""
+            },
             {
                 type: "text",
                 value: "Homebuyers in 2026 are looking beyond square footage and polished finishes. They want homes that support the way they actually live: flexible work schedules, changing family needs, lower running costs, and more time spent at home."
@@ -158,6 +178,11 @@ const blogData = [
         image: "/images/blog-img3.jpg",
         content: [
             {
+                type: "main-image",
+                src: "/images/blog-banner-main.jpg",
+                alt: ""
+            },
+            {
                 type: "text",
                 value: "Homebuyers in 2026 are looking beyond square footage and polished finishes. They want homes that support the way they actually live: flexible work schedules, changing family needs, lower running costs, and more time spent at home."
             },
@@ -194,6 +219,11 @@ const blogData = [
         date: "Apr 3, 2026",
         image: "/images/blog-img1.jpg",
         content: [
+            {
+                type: "main-image",
+                src: "/images/blog-banner-main.jpg",
+                alt: ""
+            },
             {
                 type: "text",
                 value: "Homebuyers in 2026 are looking beyond square footage and polished finishes. They want homes that support the way they actually live: flexible work schedules, changing family needs, lower running costs, and more time spent at home."

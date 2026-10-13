@@ -23,35 +23,33 @@ export default function BlogPage() {
             <div className="blog-content-row">
 
                 <div className="container">
-                
-                <h2>Insights & Inspirations</h2>
 
-                <div className="blog-content-grid">
+                    <h2>Insights & Inspirations</h2>
 
-                    {blogData.map((blog) => (
+                    <div className="blog-content-grid">
 
-                        <div className="blog-card" key={blog.id}>
-                            <div className="blog-image">
-                                <Link href="/">
+                        {blogData.map((blog) => (
+
+                            <Link href={`/blog/${blog.id}`} className="blog-card" key={blog.id}>
+                                <div className="blog-image">
                                     <Image
                                         src={blog.image}
-                                        alt={blog.title} 
+                                        alt={blog.title}
                                         width={420}
                                         height={440}
                                     />
-                                </Link>
-                            </div>
-                            <div className="blog-content">
-                                <h5>{blog.date}</h5>
-                                <h3>{blog.title}</h3>
-                            </div>
-                        </div>
+                                </div>
+                                <div className="blog-content">
+                                    <h5>{blog.date}</h5>
+                                    <h3>{blog.title}</h3>
+                                </div>
+                            </Link>
 
-                    ))}
+                        ))}
 
-                </div>
+                    </div>
 
-                <Link href="" className="show-all-btn">Show More</Link>
+                    <Link href="" className="show-all-btn">Show More</Link>
 
                 </div>
 
