@@ -154,7 +154,7 @@ function Header() {
 
                             {/* Contact CTA Button */}
                             <div className="ctaContainer">
-                                <Link href="#contact" className="contactBtn" onClick={closeAllMenus}>
+                                <Link href="/contact" className="contactBtn" onClick={closeAllMenus}>
                                     <span>Contact Us</span>
                                     <span className="arrowIcon">
                                         <RxArrowRight size={18} strokeWidth={.6} />
