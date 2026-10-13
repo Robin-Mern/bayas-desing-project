@@ -144,3 +144,14 @@
     padding: 1.5rem 2.5rem;
     border-radius: 20px;
 }
+
+.sidebar .sidebar-row2 {
+    width: 100%;
+    display: block;
+}
+
+.sidebar .sidebar-row2 image {
+    width: 100%;
+    display: block;
+    height: 100%;
+}
