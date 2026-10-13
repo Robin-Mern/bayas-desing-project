@@ -89,6 +89,14 @@ export default function TestimonialsPageContent() {
                             width={800}
                             height={450}
                         />
+                        <span className="play-btn">
+                            <Image
+                            src="/images/play-btn.svg"
+                            alt="Testimonial Video"
+                            width={80}
+                            height={80}
+                        />
+                        </span>
                     </div>
                 </div>
             </div>
