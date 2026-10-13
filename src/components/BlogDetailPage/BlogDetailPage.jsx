@@ -89,7 +89,7 @@ export default function BlogDetails({ id }) {
                                 </form>
                             </div>
                             <div className="sidebar-row2">
-                                <image src="/images/sidebar-img.png" alt="sidebar image" width={480} height={480} />
+                                <Image src="/images/sidebar-img.png" alt="sidebar image" width={480} height={480} />
                             </div>
                         </div>
                     </div>

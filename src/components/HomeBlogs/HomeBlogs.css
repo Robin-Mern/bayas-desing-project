@@ -12,6 +12,10 @@
   padding: 120px 0 110px;
 }
 
+.blog-details-page + .homeBlogsSection {
+    background: #EEEDEA;
+}
+
 /* Header */
 .homeBlogsSection .blogsHeader {
   display: flex;

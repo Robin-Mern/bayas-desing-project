@@ -72,6 +72,14 @@
     margin: 0 0 1.5rem;
 }
 
+.blog-details-page .blog-details-col1 img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: 20px;
+    margin: 0 0 1.5rem;
+}
+
 .sidebar {
     width: 100%;
 }
@@ -143,6 +151,7 @@
     background: #EEEDEA;
     padding: 1.5rem 2.5rem;
     border-radius: 20px;
+    margin: 0 0 1.5rem;
 }
 
 .sidebar .sidebar-row2 {
@@ -150,7 +159,7 @@
     display: block;
 }
 
-.sidebar .sidebar-row2 image {
+.sidebar .sidebar-row2 img {
     width: 100%;
     display: block;
     height: 100%;
