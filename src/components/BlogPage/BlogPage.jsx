@@ -6,9 +6,7 @@ import blogData from "./BlogPageData";
 
 export default function BlogPage() {
     return (
-
         <section className="blog-list-wrapper">
-
             <div className="common-breadcrumbs">
                 <div className="container">
                     <div className="page-breadcrumbs">
@@ -21,16 +19,16 @@ export default function BlogPage() {
             </div>
 
             <div className="blog-content-row">
-
                 <div className="container">
-
                     <h2>Insights & Inspirations</h2>
 
                     <div className="blog-content-grid">
-
                         {blogData.map((blog) => (
-
-                            <Link href={`/blog/${blog.id}`} className="blog-card" key={blog.id}>
+                            <Link
+                                href={`/blog/${blog.id}`}
+                                className="blog-card"
+                                key={blog.id}
+                            >
                                 <div className="blog-image">
                                     <Image
                                         src={blog.image}
@@ -39,22 +37,16 @@ export default function BlogPage() {
                                         height={440}
                                     />
                                 </div>
+
                                 <div className="blog-content">
                                     <h5>{blog.date}</h5>
                                     <h3>{blog.title}</h3>
                                 </div>
                             </Link>
-
                         ))}
-
                     </div>
-
-                    <Link href="" className="show-all-btn">Show More</Link>
-
                 </div>
-
             </div>
-
         </section>
     );
 }
