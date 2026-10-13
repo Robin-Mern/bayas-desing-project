@@ -1,5 +1,6 @@
 import React, { Suspense } from 'react';
 import BlogPageContent from '@/components/BlogPage/BlogPage';
+import HomeCta from '@/components/HomeCta/HomeCta';
 
 export const metadata = {
   title: "Our Blogs | The Bayas - Architectural & Interior Design",
@@ -12,6 +13,7 @@ export default function BlogListPage() {
             <Suspense fallback={<div className="container py-5 text-center">Loading blogs...</div>}>
                 <BlogPageContent />
             </Suspense>
+            <HomeCta />
         </main>
     );
 }
