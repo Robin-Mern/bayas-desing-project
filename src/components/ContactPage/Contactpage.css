@@ -1,0 +1,119 @@
+.contact-wrapper {
+    width: 100%;
+    padding: 100px 0 80px;
+    display: block;
+}
+
+.contact-wrapper h2 {
+    font-size: 48px;
+    color: #111111;
+    font-weight: 700;
+    letter-spacing: -1.44px;
+    line-height: 1.26;
+    margin: 0 0 1rem;
+}
+
+.contact-wrapper p {
+    font-size: 18px;
+    color: #000;
+    font-weight: 500;
+}
+
+.contact-wrapper .contact-col1 {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding-right: 4%;
+    max-width: 500px;
+    margin: 0 auto 0 0;
+}
+
+.contact-wrapper .contact-col2 {
+    width: 50%;
+    display: block;
+}
+
+.contact-wrapper .contact-methods {
+    width: 100%;
+    display: block;
+    margin-top: auto;
+}
+
+.contact-wrapper .contact-methods ul {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 2.35rem;
+}
+
+.contact-wrapper .contact-methods ul li {
+    width: 100%;
+    position: relative;
+    padding: 5px 0 0 78px;
+    font-size: 18px;
+    color: #000;
+    letter-spacing: 0;
+}
+
+.contact-wrapper .contact-methods ul li span {
+    position: absolute;
+    left: 0;
+    background: #EEEDEA;
+    width: 58px;
+    height: 58px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+}
+
+.contact-wrapper .contact-methods ul li img {
+    width: 100%;
+    display: block;
+    max-width: 26px;
+}
+
+.contact-wrapper .contact-methods ul li strong {
+    display: block;
+    font-weight: 600;
+}
+
+.contact-wrapper .contact-row {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contact-wrapper .contact-col2 .sidebar h3 {
+    display: none;
+}
+
+.contact-wrapper .contact-col2 .sidebar .sidebar-row1 {
+    margin: 0;
+}
+
+.contact-wrapper .contact-col2 .sidebar .submit-btn {
+    background: #3C2417;
+}
+
+.contact-wrapper .contact-col2 .sidebar .submit-btn:hover {
+    background: #141b34;
+}
+
+.contact-wrapper .contact-map {
+    width: 100%;
+    display: block;
+    margin: 80px 0 0 0;
+}
+
+.contact-wrapper .contact-map img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: 20px;
+}
