@@ -617,15 +617,19 @@
   .relatedProductsGrid {
     gap: 18px;
   }
+  .accordionIcon svg {
+    width: 18px;
+    height: 18px;
+  }
 }
 
 @media (max-width: 767px) {
   .productMainTitle {
-    font-size: 36px;
+    font-size: 34px;
   }
 
   .relatedProductsTitle {
-    font-size: 26px;
+    font-size: 22px;
     margin-bottom: 28px;
   }
 
@@ -636,6 +640,16 @@
 
   .relatedImgFrame {
     aspect-ratio: 16 / 11;
+  }
+
+  .productHeroGrid {
+    gap: 28px;
+    grid-template-columns: 1fr;
+  }
+
+  .productMainImageFrame {
+    width: 100%;
+    max-width: 580px;
   }
 }
 
@@ -651,11 +665,6 @@
     margin-bottom: 50px;
   }
 
-  .thumbImgWrapper {
-    width: 78px;
-    height: 78px;
-  }
-
   .productActionsRow {
     flex-direction: row;
   }
@@ -663,5 +672,34 @@
   .buyNowBtn {
     width: 100%;
   }
+  .quantitySelector {
+    min-width: 110px;
+  }
 }
 
+@media (max-width: 480px) {
+  .productMainTitle {
+    font-size: 30px;
+  }
+  .currentPrice {
+    font-size: 22px;
+  }
+  .originalPrice {
+    font-size: 17px;
+  }
+  .productShortDescription {
+    font-size: 15px;
+  }
+  .buyNowBtn {
+    font-size: 14px;
+  }
+  .productAccordionsWrapper {
+    padding: 6px 16px;
+  }
+  .accordionTitle {
+    font-size: 15px;
+  }
+  .accordionBody {
+    font-size: 14px;
+  }
+}
