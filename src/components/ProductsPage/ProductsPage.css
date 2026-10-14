@@ -287,6 +287,10 @@
   align-items: center;
 }
 
+.productDetails a {
+  text-decoration: none;
+}
+
 /* Strictly adhering to outer class rule for h3 */
 .productCard h3 {
   font-size: 17px;

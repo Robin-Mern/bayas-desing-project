@@ -140,7 +140,7 @@
 }
 
 .navLinks li a {
-  transition: color 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
 }
 
 .linkItem {
@@ -365,9 +365,12 @@
 @media(max-width:991px){
 
 .logoBadge img {  max-width: 115px;}
-.navLinks {  width: calc(100% - 240px);}
-.linkItem {font-size: 13px;padding: 8px 0px 8px 0px !important;}
-.contactBtn {   padding: 5px 5px 5px 10px;   font-size: 12px;}
+.navLinks {  width: calc(100% - 200px);}
+.linkItem {font-size: 12px;padding: 8px 0px 8px 0px !important;}
+.contactBtn {   padding: 5px 5px 5px 10px;font-size: 12px;gap: 5px;}
+
+.customDropdownMenu {min-width: 145px;}
+.customDropdownItem {padding: 6px 8px;font-size: 13px;}
 
 }
 
