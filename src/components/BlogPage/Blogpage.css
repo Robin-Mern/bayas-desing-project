@@ -173,6 +173,9 @@
     .blog-list-wrapper {
         padding: 40px 0 30px;
     }
+    .blog-list-wrapper .blog-card {
+        width: 100%;
+    }
     .blog-list-wrapper .blog-card .blog-image {
         aspect-ratio: 10.5 / 10;
     }
