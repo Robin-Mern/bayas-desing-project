@@ -466,7 +466,10 @@
 /* --------------------------------------------------------
    Responsive Media Queries
    -------------------------------------------------------- */
-@media (max-width: 991px) {
+
+   @media (max-width: 1024px) {}
+
+   @media (max-width: 991px) {
   .productHeroGrid {
     grid-template-columns: 1fr;
     gap: 36px;

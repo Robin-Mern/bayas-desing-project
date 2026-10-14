@@ -384,6 +384,11 @@
 .serviceArticleWrapper h2{font-size: 35px;}
 .serviceArticleWrapper h3{font-size: 30px;}
 
+.servicePortfolioSection h2 {
+    font-size: 40px;
+    margin: 0 0 40px;
+}
+
 }
 
 
@@ -432,6 +437,10 @@
     height: 180px;
   }
 .servicePortfolioSection h2{font-size: 42px;}
+
+.projectStoryGrid .storyLeftCol h2 {
+    font-size: 22px;
+}
 
 }
 

@@ -432,6 +432,31 @@
 /* --------------------------------------------------------
    Responsive Queries
    -------------------------------------------------------- */
+
+@media (max-width: 1199px) {
+
+.projectTitle {
+    font-size: 40px;
+}
+.projectHeroMediaSection {
+    margin-top: 40px;
+}
+.projectStorySection {
+    margin-bottom: 60px;
+}
+.portfolioDetailContentWrapper {
+    padding: 0;
+}
+
+.highlightsTitle {
+  font-size: 18px;
+}
+.highlightsBox ul li {
+    font-size: 16px;
+}
+  
+}
+
 @media (max-width: 1024px) {
   .projectMetaGrid {
     grid-template-columns: repeat(3, 1fr);
@@ -439,11 +464,51 @@
 
   .projectStoryGrid {
     grid-template-columns: 1fr;
-    gap: 40px;
   }
+
+  .projectTitle {
+    font-size: 38px;
+    letter-spacing: -.8px;
+  }
+
+  .projectHeaderSection {
+    padding-top: 50px;
+    padding-bottom: 10px;
+  }
+
+  .highlightsBox {
+    padding: 30px 24px;
+  }
+
 }
 
-@media (max-width: 768px) {
+@media (max-width: 991px) {
+
+  .projectTitle {
+    font-size: 36px;
+  }
+  .projectHeroMediaSection {
+    margin-bottom: 25px;
+  }
+  .projectStorySection {
+    margin-top: 50px;
+  }
+  .highlightsBox ul {
+    margin: 0 0 20px;
+  }
+  .highlightsBox ul li {
+    font-size: 14px;
+  }
+  .highlightsTitle {
+    font-size: 16px;
+  }
+  .highlightsBox {
+    padding: 24px 14px 10px;
+  }
+  
+}
+
+@media (max-width: 767px) {
   .projectTitle {
     font-size: 32px;
   }
