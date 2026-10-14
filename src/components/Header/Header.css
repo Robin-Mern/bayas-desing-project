@@ -84,7 +84,7 @@
 }
 
 .navToggle:hover {
-  background-color: rgba(60, 36, 23, 0.06);
+  background-color: #fef200;
 }
 
 .navToggle:focus {
@@ -106,7 +106,7 @@
 }
 
 .navToggle:hover .hamburgerBar {
-  background-color: #a07038;
+  background-color: #3c2417;
 }
 
 /* Smooth Cross (X) Animation */
@@ -382,14 +382,20 @@
 .headerWrapper.homePageHeader{
   top: 14px;
 }
-  .customNavbar {
-    border-radius: 0px;
-    padding: 10px 16px;
-    background-color: rgba(255, 255, 255, 0.96);
-    border: 1px solid rgba(60, 36, 23, 0.08);
-    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.07);
-    transition: border-radius 0.35s ease, box-shadow 0.35s ease, background-color 0.35s ease;
-  }
+.customNavbar {
+  background-color: #fffffff5;
+  border: 1px solid #3c241714;
+  border-radius: 100px;
+  padding: 10px 26px;
+  transition: border-radius .35s, box-shadow .35s, background-color .35s;
+  box-shadow: 0 6px 24px #00000012;
+  position: fixed;
+  width: calc(100% - 27px);
+  left: 0;
+  top: 13px;
+  right: 0;
+  margin-inline: auto;
+}
 
   .customNavbar.menu-open {
     border-radius: 20px;
@@ -484,27 +490,23 @@
   }
 
   .customDropdownMenu {
-    position: static !important;
-    float: none !important;
-    width: 100% !important;
-    margin: 4px 0 6px 0 !important;
-    padding: 0 8px !important;
-    background: rgba(60, 36, 23, 0.035);
-    border: 1px solid rgba(60, 36, 23, 0.06);
-    border-radius: 10px;
-    box-shadow: none !important;
-    max-height: 0;
-    overflow: hidden;
     opacity: 0;
     visibility: hidden;
-    transform: translateY(-4px);
-    transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1),
-                opacity 0.28s ease,
-                transform 0.32s ease,
-                padding 0.35s ease,
-                visibility 0.35s ease;
-    display: block !important;
+    background: #f7f5f5;
+    border: 0;
+    border-radius: 5px 5px 10px 10px;
+    max-height: 0;
     list-style: none;
+    transition: max-height .35s cubic-bezier(.4, 0, .2, 1), opacity .28s, transform .32s, padding .35s, visibility .35s;
+    overflow: hidden;
+    transform: translateY(-4px);
+    float: none !important;
+    width: 100% !important;
+    box-shadow: none !important;
+    margin: -6px 0 0 !important;
+    padding: 0 8px !important;
+    display: block !important;
+    position: static !important;
   }
 
   .customDropdownMenu.show {
@@ -528,14 +530,14 @@
     position: relative;
   }
 
-  .customDropdownItem::before {
+  /* .customDropdownItem::before {
     content: "•";
     color: #a07038;
     margin-right: 8px;
     font-size: 14px;
     opacity: 0.7;
     transition: transform 0.2s ease;
-  }
+  } */
 
   .customDropdownItem:hover,
   .customDropdownItem:active {
