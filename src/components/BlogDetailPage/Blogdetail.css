@@ -132,13 +132,36 @@
 }
 
 @media screen and (max-width:767px) {
-    
+ 
+.blog-details-page h1 {
+    font-size: 36px;
+    margin: 0 0 1.15rem;
+}
+
+.blog-details-page .blog-details-col1 {
+    margin: 0 0 0.5rem;
+    width: 100%;
+}
+
+.blog-details-page .blog-details-col2 {
+    width: 100%;
+}
+
 }
 
 @media screen and (max-width:575px) {
-    
+
+.blog-details-page h1 {
+    font-size: 32px;
+    margin: 0 0 1.10rem;
+}
+
 }
 
 @media screen and (max-width:480px) {
+
+.blog-details-page .blog-details-main-img {
+    margin: 10px 0 30px;
+}
     
 }
