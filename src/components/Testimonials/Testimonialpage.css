@@ -224,3 +224,103 @@
     border-radius:50%;
     animation:5s pulseAnimation infinite;
 }
+
+@media (max-width: 1199px){
+
+.testimonialsPageContentWrapper {padding: 60px 0;}
+.testimonials-header h2 {letter-spacing: -1.08px;font-size: 40px;}    
+
+}
+
+@media (max-width: 1024px){
+
+.testimonials-header h2 {
+    letter-spacing: -.96px;
+    margin: 0 0 1.5rem;
+    font-size: 36px;
+}
+
+.testimonials-header .rating-value {
+    font-size: 22px;
+}
+
+.testimonials-header .tesimonials-header-rating p {
+    font-size: 16px;
+}
+
+.testimonials-content {
+    margin: 20px 0 0;
+}
+
+.testimonials-content .testimonials-cards p {
+    font-size: 16px;
+}
+
+.testimonials-content .testimonials-cards h4 {
+    font-size: 16px;
+}
+
+.testimonials-content .testimonials-cards .user-info p {
+    font-size: 15px;
+}
+
+.testimonials-content .testimonials-cards .testimonials-card-bottom .user-avatar {
+    width: 60px;
+    height: 60px;
+    margin: 0 0.5rem 0 0;
+}
+
+.testimonials-video {
+    margin: 60px 0 0;
+}
+
+.testimonials-video .play-btn {
+    width: 74px;
+    height: 74px;
+    top: calc(50% + 65px);
+}
+
+}
+
+@media (max-width: 991px){
+
+section.testimonialsPageContentWrapper {
+    padding: 40px 0;
+}
+.testimonials-header .rating-value {
+    font-size: 20px;
+}
+.testimonials-header .tesimonials-header-rating p {
+    font-size: 15px;
+}
+.testimonials-content .testimonials-cards .cards-rating-head {
+    margin: 0 0 20px;
+}
+.testimonials-content .testimonials-cards .testimonials-card-top {
+    padding: 1.15rem 1rem;
+}
+.testimonials-content .testimonials-cards .testimonials-card-bottom {
+    padding: 1.15rem 1rem;
+}
+.testimonials-content .testimonials-cards .user-info p {
+    font-size: 13px;
+}
+.testimonials-content .testimonials-cards h4 {
+    font-size: 15px;
+}
+.testimonials-video {
+    margin: 40px 0 0;
+}
+.testimonials-video .play-btn {
+    width: 68px;
+    height: 68px;
+    top: calc(50% + 50px);
+}
+
+}
+
+@media (max-width: 767px){}
+
+@media (max-width: 576px){}
+
+@media (max-width: 480px){}
