@@ -580,6 +580,7 @@
   }
   .productActionsRow {
     margin-bottom: 30px;
+    gap: 12px;
   }
   .productMainTitle {
     font-size: 36px;
