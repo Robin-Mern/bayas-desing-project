@@ -489,9 +489,11 @@
   }
   .projectHeroMediaSection {
     margin-bottom: 25px;
+    margin-top: 30px;
   }
   .projectStorySection {
     margin-top: 50px;
+    margin-bottom: 40px;
   }
   .highlightsBox ul {
     margin: 0 0 20px;
@@ -504,6 +506,12 @@
   }
   .highlightsBox {
     padding: 24px 14px 10px;
+  }
+  .project-breadcrumbs {
+    margin: 0 0 30px;
+  }
+  .project-breadcrumbs ul li, .project-breadcrumbs ul li a {
+    font-size: 14px;
   }
   
 }
@@ -528,6 +536,40 @@
     grid-template-columns: 1fr;
     gap: 18px;
   }
+
+  .projectHeaderSection {
+    padding-top: 30px;
+  }
+  .project-breadcrumbs ul {
+    justify-content: start;
+  }
+
+  .projectStoryGrid .storyLeftCol {
+    width: 100%;
+  }
+  .projectStoryGrid .storyRightCol {
+    order: 1;
+    width: 100%;
+  }
+  .projectHeroMediaSection {
+    margin-bottom: 0;
+  }
+  .projectStorySection {
+    margin-top: 30px;
+  }
+  .projectStoryGrid .storyLeftCol p {
+    font-size: 15px;
+  }
+  .highlightsBox {
+    padding: 24px 1.5rem 10px;
+  }
+  .highlightsTitle {
+    font-size: 18px;
+  }
+  .highlightsBox ul li {
+    font-size: 15px;
+  }
+
 }
 
 @media (max-width: 576px) {
@@ -546,6 +588,17 @@
   .projectThumbWrapper {
     width: 90px;
     height: 65px;
+  }
+
+  .project-breadcrumbs ul {
+    flex-wrap: wrap;
+    row-gap: 0.25rem;
+  }
+
+  .projectHeroMediaSection {margin-top: 20px;}
+
+  .highlightsBox {
+    padding: 24px 1.2rem 10px;
   }
 }
 
