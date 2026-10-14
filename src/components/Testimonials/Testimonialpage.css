@@ -319,8 +319,43 @@ section.testimonialsPageContentWrapper {
 
 }
 
-@media (max-width: 767px){}
+@media (max-width: 767px){
 
-@media (max-width: 576px){}
+.testimonials-header .testimonials-header-row {
+    flex-wrap: wrap;
+}
+.testimonials-header h2 {
+    letter-spacing: -.88px;
+    margin: 0 0 1.5rem;
+    font-size: 32px;
+    width: 100%;
+}
+.testimonials-header h2 span {
+    display: inline;
+}
+.testimonials-content .testimonials-cards {
+    width: 49.50%;
+}
+.testimonials-content .testimonials-grid {
+    gap: 1.1rem 1%;
+}
+.testimonials-video .play-btn {
+    width: 32px;
+    height: 32px;
+    top: 50%;
+}
+
+}
+
+@media (max-width: 576px){
+
+.testimonials-content .testimonials-cards {
+    width: 100%;
+}
+.testimonials-content .testimonials-cards .testimonials-card-bottom:before {
+    height: 6px;
+    top: -6px;
+}    
+}
 
 @media (max-width: 480px){}
