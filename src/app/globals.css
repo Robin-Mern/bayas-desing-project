@@ -220,7 +220,13 @@ h2{
 }
 
 @media screen and (max-width: 1024px) {
-    
+
+    .sidebar .sidebar-row1 {
+        padding: 1.5rem;
+    }
+    .sidebar h3 {
+        font-size: 28px;
+    }
 }
 
 @media screen and (max-width: 991px) {
@@ -231,8 +237,11 @@ h2{
 }
 
 @media screen and (max-width: 767px) {
-.sidebar .sidebar-row1 {
+.contact-wrapper .sidebar .sidebar-row1 {
     padding: 2rem;
+}
+.sidebar .sidebar-row1 {
+    padding: 1.5rem 1rem;
 }
 
 .common-breadcrumbs {
