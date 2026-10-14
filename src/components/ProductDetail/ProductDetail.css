@@ -40,7 +40,7 @@
    Hero Section: Gallery & Details Grid
    -------------------------------------------------------- */
 .productHeroSection {
-  padding-top: 50px;
+  padding-top: 80px;
   padding-bottom: 20px;
 }
 
@@ -283,10 +283,11 @@
 }
 
 .accordionBody {
+  color: #665a56;
   padding: 0 6px 18px;
-  font-size: 14px;
-  line-height: 1.65;
-  color: #665A56;
+  font-size: 16px;
+  line-height: 1.55;
+  font-weight: 500;
 }
 
 .specsList {
@@ -359,6 +360,7 @@
   line-height: 1.5;
   color: #807B75;
   margin: 0;
+  font-weight: 500;
 }
 
 /* --------------------------------------------------------
@@ -476,13 +478,87 @@
 /* --------------------------------------------------------
    Responsive Media Queries
    -------------------------------------------------------- */
+  @media (max-width: 1199px) {
+    .productMainTitle {
+      font-size: 42px;
+    }
+    .currentPrice {
+      font-size: 26px;
+    }
+    .originalPrice {
+      font-size: 22px;
+    }
+    .productShortDescription {
+      font-size: 16px;
+    }
+    .relatedCardTitle {
+      font-size: 18px;
+    }
+  }
 
-   @media (max-width: 1024px) {}
+  @media (max-width: 1024px) {
+    
+    .productHeroSection {
+    padding-top: 50px;
+}
+
+.productHeroGrid {
+    gap: 48px;
+}
+
+.buyNowBtn {
+    font-size: 16px;
+    min-height: 52px;
+}
+
+.qtyNumber {
+    font-size: 16px;
+}
+
+.quantitySelector {
+    min-height: 52px;
+}
+
+.accordionTitle {
+    font-size: 16px;
+}
+
+.accordionBody {
+    font-size: 15px;
+}
+
+.productPerksGrid {
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+
+.perkIconWrapper {
+    width: 58px;
+    height: 58px;
+}
+
+.perkTitle {
+    font-size: 17px;
+}
+
+.perkDesc {
+    font-size: 14px;
+}
+
+.perkIcon {
+  width: 28px;
+  height: 28px;
+}
+
+.relatedProductsSection {
+    margin-bottom: 50px;
+}
+
+}
 
    @media (max-width: 991px) {
   .productHeroGrid {
-    grid-template-columns: 1fr;
-    gap: 36px;
+    gap: 30px;
   }
 
   .productMainImageFrame {
@@ -502,11 +578,49 @@
   .buyNowBtn {
     max-width: none;
   }
+  .productActionsRow {
+    margin-bottom: 30px;
+  }
+  .productMainTitle {
+    font-size: 36px;
+  }
+  .currentPrice {
+    font-size: 23px;
+  }
+  .originalPrice {
+    font-size: 19px;
+  }
+  .productPriceTag {
+    gap: 14px;
+  }
+  .accordionHeader {
+    padding: 13px 3px;
+  }
+  .relatedFromPrice {
+    font-size: 14px;
+    letter-spacing: 1.45px;
+  }
+  .relatedOrigPrice {
+    font-size: 13px;
+    letter-spacing: 1.25px;
+    margin-top: 2px;
+  }
+  .relatedAddToCartBtn {
+    margin-top: 5px;
+    letter-spacing: 1px;
+    font-size: 13px;
+  }
+  .relatedProductsSection {
+    margin-bottom: 30px;
+  }
+  .relatedProductsGrid {
+    gap: 18px;
+  }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .productMainTitle {
-    font-size: 30px;
+    font-size: 36px;
   }
 
   .relatedProductsTitle {
