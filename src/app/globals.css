@@ -198,3 +198,67 @@ h2{
     display: block;
     height: 100%;
 }
+
+@media screen and (max-width: 1199px) {
+
+.sidebar .form-group label {
+    font-size: 16px;
+}
+
+.sidebar .form-group .form-control {
+    font-size: 16px;
+}
+
+.sidebar .submit-btn {
+    font-size: 16px;
+}
+
+.common-breadcrumbs {
+    margin: 10px 0 30px;
+}
+
+}
+
+@media screen and (max-width: 1024px) {
+    
+}
+
+@media screen and (max-width: 991px) {
+    .common-breadcrumbs .page-breadcrumbs ul li, 
+    .common-breadcrumbs .page-breadcrumbs ul li a {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+.sidebar .sidebar-row1 {
+    padding: 2rem;
+}
+
+.common-breadcrumbs {
+    margin: 0 0 20px;
+}
+
+}
+
+@media screen and (max-width: 575px) {
+.sidebar .sidebar-row1 {
+    padding: 1.5rem;
+}    
+.sidebar .form-group label, 
+.sidebar .form-group .form-control, 
+.sidebar .submit-btn {
+    font-size: 15px;
+}
+.sidebar .form-group .form-control {
+    min-height: 45px;
+    border-radius: 8px;
+}
+.sidebar .form-group textarea.form-control {
+    min-height: 155px;
+    padding-top: 12px;
+}
+.sidebar .form-group label {
+    margin: 0 0 .25rem;
+}
+}
