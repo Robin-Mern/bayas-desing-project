@@ -124,9 +124,9 @@
 }
 
 .productMainTitle {
-  font-size: 38px;
+  font-size: 44px;
   font-weight: 700;
-  color: #201a16;
+  color: #260E01;
   line-height: 1.2;
   margin: 0 0 14px 0;
   letter-spacing: -0.5px;
@@ -135,28 +135,29 @@
 .productPriceTag {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 18px;
   margin-bottom: 22px;
 }
 
 .currentPrice {
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 700;
-  color: #201a16;
+  color: #111111;
 }
 
 .originalPrice {
-  font-size: 18px;
+  color: #98A2B3;
+  font-size: 24px;
   font-weight: 400;
-  color: #8e8a85;
   text-decoration: line-through;
 }
 
 .productShortDescription {
-  font-size: 15px;
+  font-size: 17px;
   line-height: 1.5;
   color: #665A56;
   margin-bottom: 28px;
+  font-weight: 500;
 }
 
 /* Action Row (Quantity + Buy Now) */
@@ -174,14 +175,15 @@
   align-items: center;
   background-color: #f3efea;
   border-radius: 50px;
-  height: 44px;
+  min-height: 56px;
   padding: 0 4px;
+  min-width: 140px;
 }
 
 .qtyBtn {
   background: none;
   border: none;
-  width: 38px;
+  width: 33.33%;
   height: 44px;
   font-size: 20px;
   font-weight: 500;
@@ -199,21 +201,21 @@
 }
 
 .qtyNumber {
-  min-width: 32px;
+  min-width: 33.33%;
   text-align: center;
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 600;
-  color: #201a16;
+  color: #3C2417;
 }
 
 .buyNowBtn {
   background-color: #2b201a;
   color: #ffffff;
   border: none;
-  height: 44px;
+  min-height: 56px;
   padding: 0 48px;
   border-radius: 9999px;
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 600;
   cursor: pointer;
   transition: background-color 0.25s ease, transform 0.2s ease, box-shadow 0.2s ease;
@@ -345,7 +347,7 @@
 }
 
 .perkTitle {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 700;
   color: #201a16;
   margin: 0 0 8px 0;
@@ -367,12 +369,12 @@
 }
 
 .relatedProductsTitle {
-  font-size: 32px;
-  font-weight: 700;
   text-align: center;
-  color: #201a16;
+  color: #000000;
+  letter-spacing: -.5px;
   margin-bottom: 38px;
-  letter-spacing: -0.5px;
+  font-size: 24px;
+  font-weight: 700;
 }
 
 .relatedProductsGrid {
@@ -414,7 +416,7 @@
 }
 
 .relatedDetails {
-  padding: 16px 8px 4px;
+  padding: 34px 8px 4px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -422,9 +424,9 @@
 }
 
 .relatedCardTitle {
-  font-size: 15px;
+  font-size: 20px;
   font-weight: 700;
-  color: #171310;
+  color: #111111;
   letter-spacing: 0.5px;
   text-transform: uppercase;
   margin: 0 0 6px 0;
@@ -438,29 +440,32 @@
 }
 
 .relatedFromPrice {
-  font-size: 14px;
+  color: #111111;
+  font-size: 16px;
   font-weight: 600;
-  color: #201a16;
+  letter-spacing: 2px;
 }
 
 .relatedOrigPrice {
-  font-size: 13px;
-  font-weight: 400;
-  color: #8e8a85;
-  text-decoration: line-through;
+    color: #6a6a6a;
+    font-size: 16px;
+    letter-spacing: 2px;
+    font-weight: 400;
+    text-decoration: line-through;
 }
 
 .relatedAddToCartBtn {
-  background: none;
-  border: none;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.8px;
+  letter-spacing: .8px;
   color: #201a16;
   cursor: pointer;
+  background: none;
+  border: none;
   padding: 4px 2px;
-  border-bottom: 1px solid #201a16;
-  transition: color 0.2s ease, border-color 0.2s ease;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1.25px;
+  transition: color .2s, border-color .2s;
+  margin-top: 10px;
 }
 
 .relatedAddToCartBtn:hover {
