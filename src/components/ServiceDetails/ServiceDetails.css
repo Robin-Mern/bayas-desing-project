@@ -391,6 +391,15 @@
 
 }
 
+@media (max-width: 1024px){
+
+  .servicePortfolioSection h2 {
+    letter-spacing: -.96px;
+    font-size: 36px;
+  }
+
+}
+
 
 /* Tablet (max-width: 991.5px) */
 @media (max-width: 991px) {
@@ -513,7 +522,7 @@
   }
 
   .servicePortfolioSection h2 {
-        font-size: 35px;
+        font-size: 32px;
   }
 
   .portfolioGalleryGrid {
